@@ -1,0 +1,3614 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+	
+    <!-- Tell the browser to be responsive to screen width -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+	
+    <!-- Favicon icon -->
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/images/favicon.png">
+    <title>FareFix Version 2.0 - Travel Technology Redefined</title>
+
+    <!-- Custom CSS -->
+			<link href="dist/css/style.css" rel="stylesheet">
+	    <link href="dist/css/custom.css" rel="stylesheet">
+    <!-- page css -->
+    <link href="assets/node_modules/icheck/skins/all.css" rel="stylesheet">
+    <link href="dist/css/pages/form-icheck.css" rel="stylesheet">
+    <link href="assets/node_modules/bootstrap-material-datetimepicker/css/bootstrap-material-datetimepicker.css" rel="stylesheet">
+    <link href="assets/node_modules/select2/dist/css/select2.min.css" rel="stylesheet" type="text/css" />
+    <link href="assets/node_modules/switchery/dist/switchery.min.css" rel="stylesheet" />
+    <link href="assets/node_modules/bootstrap-select/bootstrap-select.min.css" rel="stylesheet" />
+    <link href="assets/node_modules/bootstrap-tagsinput/dist/bootstrap-tagsinput.css" rel="stylesheet" />
+    <link href="assets/node_modules/bootstrap-touchspin/dist/jquery.bootstrap-touchspin.min.css" rel="stylesheet" />
+    <link href="assets/node_modules/multiselect/css/multi-select.css" rel="stylesheet" type="text/css" />
+
+    <!--Range slider CSS -->
+    <link href="assets/node_modules/ion-rangeslider/css/ion.rangeSlider.css" rel="stylesheet">
+    <link href="assets/node_modules/ion-rangeslider/css/ion.rangeSlider.skinModern.css" rel="stylesheet">
+
+    <!-- Popup CSS -->
+    <link href="assets/node_modules/Magnific-Popup-master/dist/magnific-popup.css" rel="stylesheet">
+    <link href="dist/css/pages/stylish-tooltip.css" rel="stylesheet">
+
+    <link href="dist/css/pages/other-pages.css" rel="stylesheet">
+
+    <!-- Seat Selection Css -->
+
+    <link href="dist/css/jquery.seat-charts.css" rel="stylesheet">
+
+ 
+
+    <!-- Tabs css -->
+    <link href="dist/css/pages/tab-page.css" rel="stylesheet">
+
+
+    <!-- Pace Preloader -->
+    <script type="text/javascript" data-pace-options='{"restartOnPushState": false,"eventLag": false}' src="dist/js/pace.min.js"></script>
+				<script type="text/javascript" src="assets/eac/airports.js"></script>
+			
+	 <!--<script type="text/javascript" src="//cdn.jsdelivr.net/jquery/1/jquery.min.js"></script>
+	<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/js/toastr.min.js"></script>-->
+	 <script type="text/javascript" src="dist/js/jquery.min.js"></script>
+	 
+<link rel="stylesheet" href="https://code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
+<script src="https://code.jquery.com/ui/1.13.2/jquery-ui.min.js"></script>
+	<script type="text/javascript" src="dist/js/toastr.min.js"></script>
+
+    <link href="//cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/css/toastr.min.css" rel="stylesheet">
+	 <link href="assets/node_modules/sweetalert2/dist/sweetalert2.min.css" rel="stylesheet">
+
+  <link href="assets/node_modules/bootstrap-switch/bootstrap-switch.min.css" rel="stylesheet">
+  <link href="assets/node_modules/bootstrap-datepicker/bootstrap-datepicker.min.css" rel="stylesheet">
+  <link href="dist/css/pages/bootstrap-switch.css" rel="stylesheet">
+      <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+<![endif]-->
+<script type="text/javascript">
+	var SiteUrl = "https://agents.farefix.com/";
+	
+</script>
+
+</head>
+		<body class="fixed-layout skin-blue mini-sidebar" >
+        <!-- ============================================================== -->
+    <!-- Main wrapper - style you can find in pages.scss -->
+    <!-- ============================================================== -->
+	<div id="flightSearchDiv" style="display:none;">
+		 	</div>
+	<div id="hotelSearchDiv" style="display:none;">
+			</div>
+	<div id="hoteldetailsDiv" style="display:none;">
+		 	</div>
+	<div id="main-wrapper">
+        <!-- ============================================================== -->
+        <!-- Topbar header - style you can find in pages.scss -->
+        <!-- ============================================================== -->
+		<header class="topbar">
+    <nav class="navbar top-navbar navbar-expand-md navbar-dark">
+        <!-- ============================================================== -->
+        <!-- Logo -->
+        <!-- ============================================================== -->
+        <div class="navbar-header d-none d-sm-block">
+            <a class="navbar-brand" href="index.php">
+                <!-- Logo icon --><b>
+                    <!--You can put here icon as well // <i class="wi wi-sunset"></i> //-->
+                    <!-- Dark Logo icon -->
+                    <img src="assets/images/pp.png" alt="homepage" class="img-circle dark-logo" />
+                    <!-- Light Logo icon -->
+                    <img src="assets/images/pp.png" alt="homepage" class="img-circle light-logo" />
+                </b>
+                <!--End Logo icon -->
+                <!-- Logo text --><span style="display:none;">
+                    <!-- dark Logo text -->
+                    <img src="assets/images/logo.png" alt="homepage" class="light-logo" />
+                    <!-- Light Logo text -->
+                    <img src="assets/images/logo.png" class="dark-logo" alt="homepage" /></span> </a>
+        </div>
+        <!-- ============================================================== -->
+        <!-- End Logo -->
+        <!-- ============================================================== -->
+        <div class="navbar-collapse">
+            <!-- ============================================================== -->
+            <!-- toggle and nav items -->
+            <!-- ============================================================== -->
+            <ul class="navbar-nav mr-auto">
+                <!-- This is  -->
+                <li class="nav-item"> <a class="nav-link nav-toggler d-block d-md-none waves-effect waves-dark" href="javascript:void(0)"><i class="ti-menu"></i></a> </li>
+                <li class="nav-item"> <a class="nav-link sidebartoggler d-none d-lg-block d-md-block waves-effect waves-dark" href="javascript:void(0)"><i class="icon-menu"></i></a> </li>
+                <!-- ============================================================== -->
+                <!-- Search -->
+                <!-- ============================================================== -->
+                <li class="nav-item">
+                    <form name="headerFrmSearch" id="headerFrmSearch" class="app-search d-none d-md-block d-lg-block" method="POST">
+                        <input type="text" name="headerSearch" class="form-control" placeholder="Search by PNR">
+                    </form>
+                </li>
+
+
+
+
+            </ul>
+            <!-- ============================================================== -->
+            <!-- User profile and search -->
+            <!-- ============================================================== -->
+            <ul class="navbar-nav my-lg-0">
+                <!-- ============================================================== -->
+
+				<li class="nav-item d-none d-sm-block">
+                       <button type="button" class="btn btn-outline-light btn-sm mt-3" >FFA102973</button>             
+
+                </li>&nbsp;&nbsp;&nbsp;
+				                <li class="nav-item d-none d-sm-block">
+                                      <button type="button" class="btn btn-outline-light btn-sm mt-3" id="Jpop" ><i class="mdi mdi-headset"></i> Contact Support</button>
+
+                </li>
+
+                <li class="nav-item">
+                    <a style="font-size: 14px; line-height: 12px" class="nav-link dropdown-toggle pt-0 pl-0 pr-0" href="" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <div class="agent-balance" style="width: 0px"> <span class="pt-2" id="updatebalance" data-toggle="tooltip" data-placement="bottom" data-original-title="Click to Update Balance"> <i class="icon-wallet text-white align-self-center"></i>
+
+                            
+
+                        </span>
+                        </div>
+                    </a>
+                </li>
+				                <li class="nav-item dropdown u-pro" id="balanceTour">
+                    <a style="font-size: 14px; line-height: 12px" class="nav-link dropdown-toggle pt-0 pl-0 pr-0" href="" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" >
+                        <div class="agent-balance">
+                            <div class="main-balance text-white pr-2">
+                                <h5 class="m-0 text-white" id="headerUserBalance" ><span class="text-white">Balance</span> INR
+                                    -81260.45                                </h5>
+																	<span class="text-white" id="headerUserCredit">Credit</span>
+								 INR
+                                0.00                            </div>
+                            <i class="fa fa-angle-down pt-2"></i>
+                        </div>
+                    </a>
+                    <div class="dropdown-menu dropdown-menu-right animated flipInY">
+                        <!-- text-->
+						                        <a href="index.php?pg=add-funds" class="dropdown-item"><i class="mdi mdi-credit-card-plus"></i> Add Instant Funds</a>
+                        <!-- text-->
+                        <a href="index.php?pg=fund-req-confirm" class="dropdown-item"><i class="mdi mdi-comment-plus-outline"></i> Deposit Update Request</a>
+                        <!-- text-->
+                        <!-- text-->
+                        <a href="index.php?pg=funds-report" class="dropdown-item"><i class="mdi mdi-format-list-numbers"></i> Funds Report</a>
+												<!--<a href="index.php?pg=add-customer-funds" class="dropdown-item"><i class="mdi mdi-cash-multiple"></i> Add Customer Funds</a>-->
+                        <!-- text-->
+                    </div>
+                </li>
+                <!-- mega menu -->
+                <!-- ============================================================== -->
+                <li class="nav-item d-none d-sm-block"> <a class="nav-link waves-effect waves-dark" data-backdrop="false" data-toggle="modal" data-target="#myModal" href=""><i class="ti-layout-width-default"></i></a>
+                    <!-- sample modal content -->
+                    <div id="myModal" class="modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                        <div class="modal-dialog modal-dialog-centered">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h4 class="modal-title">Our Offers</h4>
+                                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                                </div>
+                                <div class="modal-body">
+                                    <div class="row">
+                                        <!-- Column -->
+                                        <div class="col-md-12">
+                                            <div class="card">
+                                                <div class="card-body p-0">
+                                                    <div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
+                                                        <div class="carousel-inner" role="listbox">
+                                                            												<div class="carousel-item active"> <img class="img-fluid" src="assets/promo_alert/ffx_spice.png" alt="First slide"> </div>
+                                                                                                  
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- /.modal-content -->
+                        </div>
+                        <!-- /.modal-dialog -->
+                    </div>
+                    <!-- /.modal -->
+                </li>
+                <!-- ============================================================== -->
+                <!-- End mega menu -->
+                <!-- ============================================================== -->
+                <!-- ============================================================== -->
+                <!-- User Profile -->
+                <!-- ============================================================== -->
+                <li class="nav-item dropdown u-pro" id="profileTour" data-profileTour>
+                    <a class="nav-link dropdown-toggle waves-effect waves-dark profile-pic" href="" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><img src="assets/images/pp.jpg" alt="user" class=""> <span class="hidden-md-down">
+                            Jora Immigration Services &nbsp;<i class="fa fa-angle-down"></i></span> </a>
+                    <div class="dropdown-menu dropdown-menu-right animated flipInY">
+                        <!-- text-->
+                        <a href="index.php?pg=agency-profile" class="dropdown-item"><i class="ti-user"></i> My Profile</a>
+                        <!-- text-->
+                        <a href="javascript:void(0)" class="dropdown-item"><i class="ti-wallet"></i> My Balance</a>
+						                        <!-- text-->
+                        <div class="dropdown-divider"></div>
+                        <!-- text-->
+                        <a href="javascript:void(0)" class="dropdown-item" id="logout"><i class="fa fa-power-off"></i> Logout</a>
+                        <!-- text-->
+                    </div>
+                </li>
+                <!-- ============================================================== -->
+                <!-- End User Profile -->
+                <!-- ============================================================== -->
+            </ul>
+        </div>
+    </nav>
+</header>        <!-- ============================================================== -->
+        <!-- End Topbar header -->
+        <!-- ============================================================== -->
+        <!-- ============================================================== -->
+        <!-- Left Sidebar - style you can find in sidebar.scss  -->
+        <!-- ============================================================== -->
+        <aside class="left-sidebar">
+    <!-- Sidebar scroll-->
+    <div class="scroll-sidebar ps ps--theme_default ps--active-y">
+        <!-- Sidebar navigation-->
+        <nav class="sidebar-nav">
+            <ul id="sidebarnav">
+                
+                <!-- <li class="nav-small-cap">--- PERSONAL</li> -->
+                <li> <a class="waves-effect waves-dark" href="index.php" aria-expanded="false"><i class="icon-home"></i><span class="hide-menu">Home</span></a>
+                </li>
+                <li id="flightTour"> <a class="has-arrow waves-effect waves-dark" href="javascript:void(0)" aria-expanded="false"><i class="icon-plane"></i><span class="hide-menu">Flights</span></a>
+                    <ul aria-expanded="false" class="collapse">
+                        <li><a href="/index.php"> Flight Search </a></li>
+						<!--<li><a href="index.php?pg=special-flight-search"> Special Flight Search </a></li>-->
+						<li><a href="index.php?pg=booking-history">Booking History </a></li>
+                        <li><a href="index.php?pg=my-flight-booking"> My Flight Bookings </a></li>
+						 
+						 <li><a href="index.php?pg=my-group-flight"> My Group Flight</a></li>
+						
+                        <li><a href="index.php?pg=calendar"> Travel Calendar</a></li>
+                    </ul>
+                </li>
+                <li id="hotelTour"> <a class="has-arrow waves-effect waves-dark" href="javascript:void(0)" aria-expanded="false"><i class="icons-Hotel"></i><span class="hide-menu">Hotels</span></a>
+                    <ul aria-expanded="false" class="collapse">
+                        <li><a href="index.php?pg=hotels">Hotel Search</a></li>
+						<li><a href="index.php?pg=hotel-booking-history">Booking History </a></li>
+                        <li><a href="index.php?pg=my-hotel-booking">My Bookings</a></li>
+						 
+						
+                    </ul>
+                </li>
+				                <li> <a class="has-arrow waves-effect waves-dark" href="javascript:void(0)" aria-expanded="false"><i class="mdi mdi-account-box-outline"></i><span class="hide-menu">My Account</span></a>
+                    <ul aria-expanded="false" class="collapse">
+                        <li><a href="index.php?pg=agent-ledger">Agent Ledger</a></li>
+                        <li><a href="index.php?pg=my-cancellations">Cancellations</a></li>
+                        <li><a href="index.php?pg=agent-invoice">Invoices</a></li>
+                        <li><a href="index.php?pg=refunds">Refunds</a></li>
+                        <li><a href="index.php?pg=agent-commision">GST Commission Details</a></li>
+                    </ul>
+                </li>
+                <li> <a class="has-arrow waves-effect waves-dark" href="javascript:void(0)" aria-expanded="false"><i class="ti-settings"></i><span class="hide-menu">Control Panel</span></a>
+                    <ul aria-expanded="false" class="collapse">
+						<li><a href="index.php?pg=add-funds">Add Instant Funds</a></li>
+						<li><a href="index.php?pg=fund-req-confirm">Deposit Update</a></li>
+						<li><a href="index.php?pg=funds-report">Funds Report</a></li>
+						<!--<li><a href="index.php?pg=add-customer-funds">Add Customer Funds</a></li>-->
+                        <li><a href="index.php?pg=markup-tools">Markup Tool</a></li>
+                        <li><a href="index.php?pg=bank-details">Bank Acc Details</a></li>
+                        <li><a href="#">TDS Certificates</a></li>
+						<li><a href="index.php?pg=digital_agreement">Digital Agreement</a></li>
+                    </ul>
+                </li>
+                <li> <a class="waves-effect waves-dark" href="javascript:void(0)" onClick = "Tawk_API.toggle();" aria-expanded="false"><i class="fa fa-comments"></i><span class="hide-menu">Live Chat</span></a></li>
+            </ul>
+        </nav>
+        <!-- End Sidebar navigation -->
+    </div>
+    <!-- End Sidebar scroll-->
+</aside>        <!-- ============================================================== -->
+        <!-- End Left Sidebar - style you can find in sidebar.scss  -->
+        <!-- ============================================================== -->
+        <!-- ============================================================== -->
+        <!-- Page wrapper  -->
+        <!-- ============================================================== -->
+        <div class="page-wrapper" >
+            <!-- ============================================================== -->
+            <!-- Container fluid  -->
+            <!-- ============================================================== -->
+            <div class="container-fluid">
+                <!-- ============================================================== -->
+                <!-- Bread crumb and right sidebar toggle -->
+                <!-- ============================================================== -->
+                <div class="row page-titles">
+                    <div class="col-md-8 align-self-center">
+                        <a href="/"><img src="assets/images/logo_.png" style="width: 115px" alt="homepage" class="dark-logo" /></a>
+                        <!-- <h6 class="text-themecolor"> <i class="mdi mdi-headset text-primary"></i> IVR Support : 9829098290 | <i class="mdi mdi-phone-outgoing text-primary"></i> Sales Support : 9829098290 | <i class="mdi mdi-email-outline text-primary"></i> Support : <span class="label label-info">support@farefix.com</span> </h6> -->
+                    </div>
+                    <div class="col-md-4 align-self-center text-right">
+													<div class="d-flex justify-content-end align-items-center">
+						   
+							<!--	<button type="button" class="btn btn-info btn-sm m-l-15 right-side-toggle"><i class="fa fa-plus-circle"></i> Add Instant Funds</button>-->
+																<a href="index.php?pg=agency-profile-edit"><button type="button" class="btn btn-info btn-sm m-l-15"><i class="fa fa-plus-circle"></i> Update KYC</button></a>
+															</div>
+							                    </div>
+                </div>
+                <!-- ============================================================== -->
+                <!-- End Bread crumb and right sidebar toggle -->
+                <!-- ============================================================== -->
+                <!-- ============================================================== -->
+                <!-- Start Page Content -->
+                <!-- ============================================================== -->
+				<script type="text/javascript" src="assets/lodash.min.js"></script>
+<script src="assets/node_modules/jquery/jquery-3.2.1.min.js"></script>
+<script type="text/javascript" src="assets/fuse.min.js"></script>
+
+<!-- ============================================================== -->
+<!-- Bread crumb and right sidebar toggle -->
+<!-- ============================================================== -->
+<!-- <div class="row page-titles"> 
+    <div class="col-md-5 align-self-center">
+        <h4 class="text-themecolor">Starter Page</h4>
+    </div>
+    <div class="col-md-7 align-self-center text-right">
+        <div class="d-flex justify-content-end align-items-center">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="javascript:void(0)">Home</a></li>
+                <li class="breadcrumb-item active">Starter Page</li>
+            </ol>
+            <button type="button" class="btn btn-info d-none d-lg-block m-l-15"><i class="fa fa-plus-circle"></i> Create New</button>
+        </div>
+    </div>
+</div> -->
+<!-- ============================================================== -->
+<!-- End Bread crumb and right sidebar toggle -->
+<!-- ============================================================== -->
+<!-- <div class="row">
+    <div class="col-12">
+        <div class="card">
+            <div class="card-body">
+                This is some text within a card block.
+            </div>
+        </div>
+    </div>
+</div> -->
+	
+<div class="row">
+    <!-- Column -->
+	    <div class="offset-md-1 col-md-10">
+        <div class="card">
+            <div class="card-body">
+                <!-- Nav tabs -->
+                <ul class="nav nav-tabs customtab2" role="tablist">
+                    <li class="nav-item"> <a class="nav-link NormalTabSearch active" data-toggle="tab" href="#normalSearch" role="tab"><span class="hidden-sm-up"><i class="mdi mdi-magnify"></i></span> <span class="hidden-xs-down">Normal Search</span></a> </li>
+                    					<li class="nav-item"> <a class="nav-link SplDealTabSearch" data-toggle="tab" href="#splDealFare" role="tab"><span class="hidden-sm-up"><i class="mdi mdi-account-convert"></i></span> <span class="hidden-xs-down">Spl Deal Fare</span></a> </li>
+					   					<!--<li class="nav-item"> <a class="nav-link" data-toggle="tab" href="#farefixSearch" role="tab"><span class="hidden-sm-up"><i class="fa fa-compass fa-spin" style="color:red"></i></span> <span class="hidden-xs-down">FD Search <sup>New</sup></span></a> </li>-->
+                    <li class="nav-item"> <a class="nav-link" data-toggle="tab" href="#groupReq" role="tab"><span class="hidden-sm-up"><i class="mdi mdi-account-multiple"></i></span> <span class="hidden-xs-down">Group Request</span></a> </li>
+					<li class="nav-item"> <a class="nav-link" data-toggle="tab" href="#multiStop" role="tab"><span class="hidden-sm-up"><i class="mdi mdi-account-multiple"></i></span> <span class="hidden-xs-down">Multi Stop</span></a> </li>
+					
+					<li class="nav-item"> <a class="nav-link" data-toggle="tab" href="#cheapest" role="tab"><span class="hidden-sm-up"><i class="mdi mdi-microphone-outline"></i></span> <span class="hidden-xs-down">Cheapest Search <sup>Beta</sup> </span></a> </li>
+					<!--<li class="nav-item"> <a class="nav-link" href="index.php?pg=chat-gpt" role="tab"><span class="hidden-sm-up"><i class="mdi mdi-microphone-outline"></i></span> <span class="hidden-xs-down">Farefix Bot</span></a> </li>-->
+					
+                </ul>
+                
+                <!-- Tab panes -->
+                <div class="tab-content">
+                    <div class="tab-pane active pt-3" id="normalSearch" role="tabpanel">
+														<form method="POST" action="index.php?pg=flight-results-onewaynew" id="onwaynew"> 
+													
+							<input type="hidden" name="flightSearch" value="1" />
+                        <div class="d-flex m-b-40 align-items-center no-block">
+                            <h5 class="card-title d-none d-lg-block">Flight Search</h5>
+                            <div class="ml-auto">
+                                <ul class="list-inline icheck-list">
+                                    <li>
+                                        <input tabindex="7" type="radio" class="check" id="normalminimal-radio-1" data-radio="iradio_flat-blue" name="choose-travel" value="1" checked>
+                                        <label for="normalminimal-radio-1">Oneway</label>
+                                    </li>
+                                    <li>
+										<input tabindex="8" type="radio" class="check" id="normalminimal-radio-2" data-radio="iradio_flat-blue" name="choose-travel" value="2">
+                                        <label for="normalminimal-radio-2">Round Trip</label>
+                                    </li>
+                                    <li>
+                                        <input tabindex="9" type="radio" class="check" id="normalminimal-radio-3" data-radio="iradio_flat-blue" name="choose-travel" value="3">
+                                        <label for="normalminimal-radio-3">Round Trip Spl</label>
+                                    </li>
+                                </ul> 
+                            </div>
+                        </div>
+						
+                        
+                            <div class="form-body">
+                                <div class="row">
+                                    <div class="col-md-3">
+                                        <div class="form-group">
+                                            <label class="control-label">DEPARTURE</label><a href="javascript:" role="button" onclick="swapVal();"> <i class="float-right mdi-rotate-3d mdi "></i></a>
+                                            <div class="easy-autocomplete eac-Funky"  > <!-- removed width: 218.333px by jpr -->
+											<input type="text" class="form-control valid" name="origin" id="departure" placeholder="Departure" value="Delhi (DEL)" autocomplete="off">
+											<div class="easy-autocomplete-container" id="eac-container-template-icon-right">
+												<ul id="departureUl" style="display:none;">
+													<div class="eac-category">POPULAR CITIES</div>
+													<li data-value="Mumbai (BOM)"><div class="eac-item">Mumbai, India
+													<p class="font12 greyText appendBottom3"> Chhatrapati Shivaji International Airport</p>
+													<span>BOM</span></div></li>
+													<li data-value="Delhi (DEL)"><div class="eac-item">Delhi, India
+													<p class="font12 greyText appendBottom3"> Delhi Airport</p>
+													<span>DEL</span></div></li>
+													<li data-value="Bangalore (BLR)"><div class="eac-item">Bangalore, India
+													<p class="font12 greyText appendBottom3"> Kempegowda International Airport</p>
+													<span>BLR</span></div></li>
+													<li data-value="Kolkata (CCU)"><div class="eac-item">Kolkata, India
+													<p class="font12 greyText appendBottom3"> Netaji Subhash Chandra Bose International Airport</p>
+													<span>CCU</span></div></li>
+													<li data-value="Hyderabad (HYD)"><div class="eac-item">Hyderabad, India
+													<p class="font12 greyText appendBottom3"> Rajiv Gandhi International Airport</p>
+													<span>HYD</span></div></li>
+													
+													
+												</ul>
+												<ul id="departuredynamicUl" style="display:none;"></ul>
+												</div>
+											</div>
+                                        </div>
+                                    </div>
+                                    <!--/span-->
+                                    <div class="col-md-3">
+                                        <div class="form-group">
+                                            <label class="control-label">ARRIVAL</label> 
+                                            <div class="easy-autocomplete eac-Funky" > <!-- removed width: 218.333px by jpr -->
+												<input class="form-control valid" name="destination" id="arrival" placeholder="Arrival" value="Jaipur (JAI)" autocomplete="off">
+												<div class="easy-autocomplete-container" id="eac-container-template-icon-right">
+												<ul id="arrivalUl" style="display:none;">
+													<div class="eac-category">POPULAR CITIES</div>
+													<li data-value="Mumbai (BOM)"><div class="eac-item">Mumbai, India
+													<p class="font12 greyText appendBottom3"> Chhatrapati Shivaji International Airport</p>
+													<span>BOM</span></div></li>
+													<li data-value="Delhi (DEL)"><div class="eac-item">Delhi, India
+													<p class="font12 greyText appendBottom3"> Delhi Airport</p>
+													<span>DEL</span></div></li>
+													<li data-value="Bangalore (BLR)"><div class="eac-item">Bangalore, India
+													<p class="font12 greyText appendBottom3"> Kempegowda International Airport</p>
+													<span>BLR</span></div></li>
+													<li data-value="Kolkata (CCU)"><div class="eac-item">Kolkata, India
+													<p class="font12 greyText appendBottom3"> Netaji Subhash Chandra Bose International Airport</p>
+													<span>CCU</span></div></li>
+													<li data-value="Hyderabad (HYD)"><div class="eac-item">Hyderabad, India
+													<p class="font12 greyText appendBottom3"> Rajiv Gandhi International Airport</p>
+													<span>HYD</span></div></li>
+													
+													
+													
+												</ul>
+												<ul id="arrivaldynamicUl" style="display:none;"></ul>
+												</div>
+											</div>
+                                        </div>
+                                    </div>
+                                    <!--/span-->
+                                    <div class="col-md-3">
+                                        <div class="form-group">
+                                            <label class="control-label">LEAVE ON</label>
+                                            <input type="text" class="form-control mdate" placeholder="LEAVE ON" value="06-08-2025" id="leavedate" name="leavedate">
+                                        </div>
+                                    </div>
+                                    <!--/span-->
+                                    <div class="col-md-3">
+                                        <div class="form-group">
+                                            <label class="control-label">RETURN</label>
+                                            <input type="text" class="form-control mdate" placeholder="RETURN" id="returndate" name="returndate" disabled>
+                                        </div>
+                                    </div>
+                                    <!--/span-->
+                                </div>
+                                <!--/row-->
+                                <div class="row">
+                                    <div class="col-sm-3 col-lg-3 travellers-class form-group">
+                                        <label>FLYER DETAILS</label>
+										<input type="text" id="flightTravellersClass" class="travellers-class-input form-control" name="flight-travellers-class" placeholder="Travellers, Class" value="1 Pax - Economy Class" readonly="" required="" onkeypress="return false;">
+										<input type="hidden" id="passengers" value="1" readonly="">
+										<input type="hidden" id="classType" value="Economy Class" readonly="">
+										<div class="travellers-dropdown" style="display: none;">
+											<div class="row align-items-center">
+												<div class="col-sm-7">
+													<p class="mb-sm-0">Adults <small class="text-muted">(12+ yrs)</small></p>
+												</div>
+												<div class="col-sm-5">
+													<div class="qty input-group number-spinner">
+														<div class="input-group-prepend">
+															<button type="button" class="btn bg-light-4" data-value="decrease" data-target="#flightAdult-travellers" data-toggle="spinner" data-dir="dwn">-</button>
+														</div>
+														<input type="text" data-ride="spinner" name="paxadult" id="adult" class="qty-spinner form-control" value="1" max=9 min=1 readonly="">
+														<div class="input-group-append">
+															<button type="button" class="btn bg-light-4" data-value="increase" data-target="#flightAdult-travellers" data-toggle="spinner" data-dir="up">+</button>
+														</div>
+													</div>
+												</div>
+											</div>
+											<hr class="my-2">
+											<div class="row align-items-center">
+												<div class="col-sm-7">
+													<p class="mb-sm-0">Children <small class="text-muted">(2-12 yrs)</small></p>
+												</div>
+												<div class="col-sm-5">
+													<div class="qty input-group number-spinner">
+														<div class="input-group-prepend">
+															<button type="button" class="btn bg-light-4" data-value="decrease" data-target="#flightChildren-travellers" data-toggle="spinner" data-dir="dwn">-</button>
+														</div>
+														<input type="text" data-ride="spinner" name="paxchild" id="child" class="qty-spinner form-control" value="0" max=8 min=0 readonly="">
+														<div class="input-group-append">
+															<button type="button" class="btn bg-light-4" data-value="increase" data-target="#flightChildren-travellers" data-toggle="spinner" data-dir="up">+</button>
+														</div>
+													</div>
+												</div>
+											</div>
+											<hr class="my-2">
+											<div class="row align-items-center">
+												<div class="col-sm-7">
+													<p class="mb-sm-0">Infants <small class="text-muted">(Below 2 yrs)</small></p>
+												</div>
+												<div class="col-sm-5">
+													<div class="qty input-group number-spinner">
+														<div class="input-group-prepend">
+															<button type="button" class="btn bg-light-4" data-value="decrease" data-target="#flightInfants-travellers" data-toggle="spinner" data-dir="dwn">-</button>
+														</div>
+														<input type="text" data-ride="spinner" name="paxinfant" id="infant" class="qty-spinner form-control" value="0" max=5 min=0 readonly="">
+														<div class="input-group-append">
+															<button type="button" class="btn bg-light-4" data-value="increase" data-target="#flightInfants-travellers" data-toggle="spinner" data-dir="up">+</button>
+														</div>
+													</div>
+												</div>
+											</div>
+											<hr class="mt-2">
+											<div class="mb-3">
+												<div class="custom-control custom-radio">
+													<input id="flightClassEconomic" name="class" class="flight-class custom-control-input" value="E" checked="" required="" type="radio" data-val="Economy Class">
+													<label class="custom-control-label" for="flightClassEconomic">Economy Class</label>
+												</div>
+												<div class="custom-control custom-radio">
+													<input id="flightClassPremiumEconomic" name="class" class="flight-class custom-control-input" value="B" required="" type="radio" data-val="Business Class">
+													<label class="custom-control-label" for="flightClassPremiumEconomic">Business Class</label>
+												</div>
+												<div class="custom-control custom-radio">
+													<input id="flightClassBusiness" name="class" class="flight-class custom-control-input" value="PE" required="" type="radio" data-val="Premium Economy">
+													<label class="custom-control-label" for="flightClassBusiness">Premium Economy</label>
+												</div>
+												<div class="custom-control custom-radio">
+													<input id="flightClassPremiumBusinessClass" name="class" class="flight-class custom-control-input" value="PB" required="" type="radio" data-val="Premium Business">
+													<label class="custom-control-label" for="flightClassPremiumBusinessClass">Premium Business</label>
+												</div>
+												<div class="custom-control custom-radio">
+													<input id="flightClassFirstClass" name="class" class="flight-class custom-control-input" value="F" required="" type="radio" data-val="First Class">
+													<label class="custom-control-label" for="flightClassFirstClass">First Class</label>
+												</div>
+											</div>
+											<button class="btn btn-primary btn-block submit-done" type="button">Done</button>
+										</div>
+										
+						
+                                    </div>
+                                    <div class="col-md-3" id="oneroundPreAirline">
+                                        <div class="form-group">
+                                            <label class="text-uppercase">Preferred Airline</label>
+                                            <select name="prefairline[]" id="prefairline" class="form-control selectpicker" multiple data-actions-box="true">
+												<option value="SG">SpiceJet</option>
+												<option value="6E">Indigo</option>
+												<option value="G8">GoFIRST</option>
+												<option value="UK">Vistara</option>
+												<option value="AI">Air India</option>
+												<option value="I5">AirAsia India</option>
+												
+											</select>
+                                        </div>
+                                    </div>
+									<div class="col-md-3" id="specialTripPreAirline" style="display:none;">
+                                        <div class="form-group">
+                                            <label class="text-uppercase">Preferred Airline</label>
+                                            <select name="prefairline" id="prefairline_special" class="form-control selectpicker" data-actions-box="true">
+												<option value="GDS">GDS</option>
+												<option value="LCC">LCC</option>
+												<option value="SpiceJet">Spice Jet</option>
+												<!--<option value="GoAir"></option>-->
+											</select>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <div class="form-group pt-4">
+                                            <div class="custom-control custom-checkbox mr-sm-2 pt-3">
+                                                <input type="checkbox" class="custom-control-input" id="checkbox1" name="directonly" value="yes">
+                                                <label class="custom-control-label" for="checkbox1">Show Direct Flights Only</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <div class="form-actions">
+                                            <label class="text-uppercase">&nbsp;</label>
+                                            <button type="submit" class="btn btn-info btn-block"><i class="mdi mdi-airplane-takeoff"></i> Search Flights</button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!--/row-->
+                                <!--/row-->
+                            </div>
+                        </form>
+                    </div>
+                    <div class="tab-pane  pt-3" id="splDealFare" role="tabpanel">
+					
+													<form method="POST" action="index.php?pg=flight-results-specialdealnew" id="specialdealnew">  
+											
+						
+						<input type="hidden" name="flightSearch" value="1" />
+                        <div class="d-flex m-b-40 align-items-center no-block">
+                            <h5 class="card-title d-none d-lg-block">Flight Search</h5>
+                            <div class="ml-auto">
+                                <ul class="list-inline icheck-list">
+                                    <li>
+                                        <input tabindex="7" type="radio" class="check" id="normalminimalDeal-radio-1" data-radio="iradio_flat-blue" name="choose-travel" value="1" checked>
+                                        <label for="normalminimalDeal-radio-1">Oneway</label>
+                                    </li>
+                                    <li>
+										<input tabindex="8" type="radio" class="check" id="normalminimalDeal-radio-2" data-radio="iradio_flat-blue" name="choose-travel" value="2">
+                                        <label for="normalminimalDeal-radio-2">Round Trip</label>
+                                    </li>
+                                   
+                                </ul> 
+                            </div>
+                        </div>
+						
+                        
+                            <div class="form-body">
+                                <div class="row">
+                                    <div class="col-md-3">
+                                        <div class="form-group">
+                                            <label class="control-label">DEPARTURE</label><a href="javascript:" role="button" onclick="swapValDeal();"> <i class="float-right mdi-rotate-3d mdi "></i></a>
+                                            <div class="easy-autocomplete eac-Funky" >
+											<input type="text" class="form-control valid" name="origin" id="departureDeal" placeholder="Departure" value="Delhi (DEL)" autocomplete="off">
+											<div class="easy-autocomplete-container" id="eac-container-template-icon-rightDeal">
+												<ul id="departureUlDeal" style="display:none;">
+													<div class="eac-category">POPULAR CITIES</div>
+													<li data-value="Mumbai (BOM)"><div class="eac-item">Mumbai, India
+													<p class="font12 greyText appendBottom3"> Chhatrapati Shivaji International Airport</p>
+													<span>BOM</span></div></li>
+													<li data-value="Delhi (DEL)"><div class="eac-item">Delhi, India
+													<p class="font12 greyText appendBottom3"> Delhi Airport</p>
+													<span>DEL</span></div></li>
+													<li data-value="Bangalore (BLR)"><div class="eac-item">Bangalore, India
+													<p class="font12 greyText appendBottom3"> Kempegowda International Airport</p>
+													<span>BLR</span></div></li>
+													<li data-value="Kolkata (CCU)"><div class="eac-item">Kolkata, India
+													<p class="font12 greyText appendBottom3"> Netaji Subhash Chandra Bose International Airport</p>
+													<span>CCU</span></div></li>
+													<li data-value="Hyderabad (HYD)"><div class="eac-item">Hyderabad, India
+													<p class="font12 greyText appendBottom3"> Rajiv Gandhi International Airport</p>
+													<span>HYD</span></div></li>
+													
+													
+													
+												</ul>
+												<ul id="departuredynamicUlDeal" style="display:none;"></ul>
+												</div>
+											</div>
+                                        </div>
+                                    </div>
+                                    <!--/span-->
+                                    <div class="col-md-3">
+                                        <div class="form-group">
+                                            <label class="control-label">ARRIVAL</label> 
+                                            <div class="easy-autocomplete eac-Funky" >
+												<input class="form-control valid" name="destination" id="arrivalDeal" placeholder="Arrival" value="Jaipur (JAI)" autocomplete="off">
+												<div class="easy-autocomplete-container" id="eac-container-template-icon-rightDeal">
+												<ul id="arrivalUlDeal" style="display:none;">
+													<div class="eac-category">POPULAR CITIES</div>
+													<li data-value="Mumbai (BOM)"><div class="eac-item">Mumbai, India
+													<p class="font12 greyText appendBottom3"> Chhatrapati Shivaji International Airport</p>
+													<span>BOM</span></div></li>
+													<li data-value="Delhi (DEL)"><div class="eac-item">Delhi, India
+													<p class="font12 greyText appendBottom3"> Delhi Airport</p>
+													<span>DEL</span></div></li>
+													<li data-value="Bangalore (BLR)"><div class="eac-item">Bangalore, India
+													<p class="font12 greyText appendBottom3"> Kempegowda International Airport</p>
+													<span>BLR</span></div></li>
+													<li data-value="Kolkata (CCU)"><div class="eac-item">Kolkata, India
+													<p class="font12 greyText appendBottom3"> Netaji Subhash Chandra Bose International Airport</p>
+													<span>CCU</span></div></li>
+													<li data-value="Hyderabad (HYD)"><div class="eac-item">Hyderabad, India
+													<p class="font12 greyText appendBottom3"> Rajiv Gandhi International Airport</p>
+													<span>HYD</span></div></li>
+													
+
+													
+												</ul>
+												<ul id="arrivaldynamicUlDeal" style="display:none;"></ul>
+												</div>
+											</div>
+                                        </div>
+                                    </div>
+                                    <!--/span-->
+                                    <div class="col-md-3">
+                                        <div class="form-group">
+                                            <label class="control-label">LEAVE ON</label>
+                                            <input type="text" class="form-control mdate" placeholder="LEAVE ON" value="06-08-2025" id="leavedateDeal" name="leavedate">
+                                        </div>
+                                    </div>
+                                    <!--/span-->
+                                    <div class="col-md-3">
+                                        <div class="form-group">
+                                            <label class="control-label">RETURN</label>
+                                            <input type="text" class="form-control mdate" placeholder="RETURN" id="returndateDeal" name="returndate" disabled>
+                                        </div>
+                                    </div>
+                                    <!--/span-->
+                                </div>
+                                <!--/row-->
+                                <div class="row">
+                                    <div class="col-sm-3 col-lg-3 travellers-classDeal form-group">
+                                        <label>FLYER DETAILS</label>
+										<input type="text" id="flightTravellersClassDeal" class="travellers-class-input form-control" name="flight-travellers-class" placeholder="Travellers, Class" value="1 Pax - Economy Class" readonly="" required="" onkeypress="return false;">
+										<input type="hidden" id="passengersDeal" value="1" readonly="">
+										<input type="hidden" id="classTypeDeal" value="Economy Class" readonly="">
+										<div class="travellers-dropdown DealStepdropdown" style="display: none;">
+											<div class="row align-items-center">
+												<div class="col-sm-7">
+													<p class="mb-sm-0">Adults <small class="text-muted">(12+ yrs)</small></p>
+												</div>
+												<div class="col-sm-5">
+													<div class="qty input-group number-spinnerDeal">
+														<div class="input-group-prepend">
+															<button type="button" class="btn bg-light-4" data-value="decrease" data-target="#flightAdult-travellers" data-toggle="spinner" data-dir="dwn">-</button>
+														</div>
+														<input type="text" data-ride="spinner" name="paxadult" id="adult" class="qty-spinner form-control paxadultDeal" value="1" max=9 min=1 readonly="">
+														<div class="input-group-append">
+															<button type="button" class="btn bg-light-4" data-value="increase" data-target="#flightAdult-travellers" data-toggle="spinner" data-dir="up">+</button>
+														</div>
+													</div>
+												</div>
+											</div>
+											<hr class="my-2">
+											<div class="row align-items-center">
+												<div class="col-sm-7">
+													<p class="mb-sm-0">Children <small class="text-muted">(2-12 yrs)</small></p>
+												</div>
+												<div class="col-sm-5">
+													<div class="qty input-group number-spinnerDeal">
+														<div class="input-group-prepend">
+															<button type="button" class="btn bg-light-4" data-value="decrease" data-target="#flightChildren-travellers" data-toggle="spinner" data-dir="dwn">-</button>
+														</div>
+														<input type="text" data-ride="spinner" name="paxchild" id="child" class="qty-spinner form-control paxchildDeal" value="0" max=8 min=0 readonly="">
+														<div class="input-group-append">
+															<button type="button" class="btn bg-light-4" data-value="increase" data-target="#flightChildren-travellers" data-toggle="spinner" data-dir="up">+</button>
+														</div>
+													</div>
+												</div>
+											</div>
+											<hr class="my-2">
+											<div class="row align-items-center">
+												<div class="col-sm-7">
+													<p class="mb-sm-0">Infants <small class="text-muted">(Below 2 yrs)</small></p>
+												</div>
+												<div class="col-sm-5">
+													<div class="qty input-group number-spinnerDeal">
+														<div class="input-group-prepend">
+															<button type="button" class="btn bg-light-4" data-value="decrease" data-target="#flightInfants-travellers" data-toggle="spinner" data-dir="dwn">-</button>
+														</div>
+														<input type="text" data-ride="spinner" name="paxinfant" id="infant" class="qty-spinner form-control paxinfantDeal" value="0" max=5 min=0 readonly="">
+														<div class="input-group-append">
+															<button type="button" class="btn bg-light-4" data-value="increase" data-target="#flightInfants-travellers" data-toggle="spinner" data-dir="up">+</button>
+														</div>
+													</div>
+												</div>
+											</div>
+											<hr class="mt-2">
+											<div class="mb-3">
+												<div class="custom-control custom-radio">
+													<input id="flightClassEconomicDeal" name="class" class="flight-classDeal custom-control-input" value="E" checked="" required="" type="radio" data-val="Economy Class">
+													<label class="custom-control-label" for="flightClassEconomicDeal">Economy Class</label>
+												</div>
+												<div class="custom-control custom-radio">
+													<input id="flightClassPremiumEconomicDeal" name="class" class="flight-classDeal custom-control-input" value="B" required="" type="radio" data-val="Business Class">
+													<label class="custom-control-label" for="flightClassPremiumEconomicDeal">Business Class</label>
+												</div>
+												<div class="custom-control custom-radio">
+													<input id="flightClassBusinessDeal" name="class" class="flight-classDeal custom-control-input" value="PE" required="" type="radio" data-val="Premium Economy">
+													<label class="custom-control-label" for="flightClassBusinessDeal">Premium Economy</label>
+												</div>
+												<div class="custom-control custom-radio">
+													<input id="flightClassPremiumBusinessClassDeal" name="class" class="flight-classDeal custom-control-input" value="PB" required="" type="radio" data-val="Premium Business">
+													<label class="custom-control-label" for="flightClassPremiumBusinessClassDeal">Premium Business</label>
+												</div>
+												<div class="custom-control custom-radio">
+													<input id="flightClassFirstClassDeal" name="class" class="flight-classDeal custom-control-input" value="F" required="" type="radio" data-val="First Class">
+													<label class="custom-control-label" for="flightClassFirstClassDeal">First Class</label>
+												</div>
+											</div>
+											<button class="btn btn-primary btn-block submit-doneDeal" type="button">Done</button>
+										</div>
+										
+						
+                                    </div>
+                                    <div class="col-md-3" id="oneroundPreAirline">
+                                        <div class="form-group">
+                                            <label class="text-uppercase">Preferred Airline</label>
+                                            <select name="prefairline[]" id="prefairline" class="form-control selectpicker" multiple data-actions-box="true">
+												<option value="SG">SpiceJet</option>
+												<option value="6E">Indigo</option>
+												<option value="G8">GoFIRST</option>
+												<option value="UK">Vistara</option>
+												<option value="AI">Air India</option>
+												<option value="I5">AirAsia India</option>
+											</select>
+                                        </div>
+                                    </div>
+									
+                                    <div class="col-md-3">
+                                        <div class="form-group pt-4">
+                                            <div class="custom-control custom-checkbox mr-sm-2 pt-3">
+                                                <input type="checkbox" class="custom-control-input" id="specialDealcheckbox1" name="directonly" value="yes">
+                                                <label class="custom-control-label" for="specialDealcheckbox1">Show Direct Flights Only</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <div class="form-actions">
+                                            <label class="text-uppercase">&nbsp;</label>
+                                            <button type="submit" class="btn btn-info btn-block"><i class="mdi mdi-airplane-takeoff"></i> Search Flights</button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!--/row-->
+                                <!--/row-->
+                            </div>
+                        </form>
+                    </div>
+					<div class="tab-pane pt-3" id="groupReq" role="tabpanel">
+                        <div class="d-flex m-b-40 align-items-center no-block">
+                            <h5 class="card-title d-none d-lg-block">Flight Search</h5>
+                            <div class="ml-auto">
+                               
+                            </div>
+                        </div>
+                        	<form method="POST" action="index.php?pg=flight-results-group" id="groupsearch"> 
+								<input type="hidden" name="paxadult" value="1" />
+								<input type="hidden" name="flightSearch" value="1" />
+								<input type="hidden" name="choose-travel" value="1" />
+                            <div class="form-body">
+                                <div class="row">
+                                    <div class="col-md-3">
+                                        <div class="form-group">
+                                            <label class="control-label">DEPARTURE</label><a href="javascript:" role="button" onclick="swapValGroup();"> <i class="float-right mdi-rotate-3d mdi "></i></a>
+                                            <div class="easy-autocomplete eac-Funky">
+											<input type="text" class="form-control valid" name="origin" id="departureGroup" placeholder="Departure" value="Delhi (DEL)" autocomplete="off">
+											<div class="easy-autocomplete-container" id="eac-container-template-icon-rightGroup">
+												<ul id="departureUlGroup" style="display:none;">
+													<div class="eac-category">POPULAR CITIES</div>
+													<li data-value="Mumbai (BOM)"><div class="eac-item">Mumbai, India
+													<p class="font12 greyText appendBottom3"> Chhatrapati Shivaji International Airport</p>
+													<span>BOM</span></div></li>
+													<li data-value="Delhi (DEL)"><div class="eac-item">Delhi, India
+													<p class="font12 greyText appendBottom3"> Delhi Airport</p>
+													<span>DEL</span></div></li>
+													<li data-value="Bangalore (BLR)"><div class="eac-item">Bangalore, India
+													<p class="font12 greyText appendBottom3"> Kempegowda International Airport</p>
+													<span>BLR</span></div></li>
+													<li data-value="Kolkata (CCU)"><div class="eac-item">Kolkata, India
+													<p class="font12 greyText appendBottom3"> Netaji Subhash Chandra Bose International Airport</p>
+													<span>CCU</span></div></li>
+													<li data-value="Hyderabad (HYD)"><div class="eac-item">Hyderabad, India
+													<p class="font12 greyText appendBottom3"> Rajiv Gandhi International Airport</p>
+													<span>HYD</span></div></li>
+													
+													
+													
+												</ul>
+												<ul id="departuredynamicUlGroup" style="display:none;"></ul>
+												</div>
+											</div>
+                                        </div>
+                                    </div>
+                                    <!--/span-->
+                                    <div class="col-md-3">
+                                         <div class="form-group">
+                                            <label class="control-label">ARRIVAL</label> 
+                                            <div class="easy-autocomplete eac-Funky">
+												<input class="form-control valid" name="destination" id="arrivalGroup" placeholder="Arrival" value="Jaipur (JAI)" autocomplete="off">
+												<div class="easy-autocomplete-container" id="eac-container-template-icon-rightGroup">
+												<ul id="arrivalUlGroup" style="display:none;">
+													<div class="eac-category">POPULAR CITIES</div>
+													<li data-value="Mumbai (BOM)"><div class="eac-item">Mumbai, India
+													<p class="font12 greyText appendBottom3"> Chhatrapati Shivaji International Airport</p>
+													<span>BOM</span></div></li>
+													<li data-value="Delhi (DEL)"><div class="eac-item">Delhi, India
+													<p class="font12 greyText appendBottom3"> Delhi Airport</p>
+													<span>DEL</span></div></li>
+													<li data-value="Bangalore (BLR)"><div class="eac-item">Bangalore, India
+													<p class="font12 greyText appendBottom3"> Kempegowda International Airport</p>
+													<span>BLR</span></div></li>
+													<li data-value="Kolkata (CCU)"><div class="eac-item">Kolkata, India
+													<p class="font12 greyText appendBottom3"> Netaji Subhash Chandra Bose International Airport</p>
+													<span>CCU</span></div></li>
+													<li data-value="Hyderabad (HYD)"><div class="eac-item">Hyderabad, India
+													<p class="font12 greyText appendBottom3"> Rajiv Gandhi International Airport</p>
+													<span>HYD</span></div></li>
+													
+													
+												</ul>
+												<ul id="arrivaldynamicUlGroup" style="display:none;"></ul>
+												</div>
+											</div>
+                                        </div>
+                                    </div>
+                                    <!--/span-->
+									<div class="col-md-3">
+                                        <div class="form-group">
+                                            <label class="control-label">LEAVE ON</label>
+                                            <input type="text" class="form-control mdate" placeholder="LEAVE ON" value="06-08-2025" id="leavedateGroup" name="leavedate">
+                                        </div>
+                                    </div>
+                                </div>
+                                <!--/row-->
+                               
+                                <!--/row-->
+                                <!--/row-->
+                                <!--/row-->
+                                <div class="row">
+                                    <div class="col-md-3">
+                                        <div class="form-group">
+                                            <label class="text-uppercase">Preferred Class</label>
+                                            <select class="form-control custom-select" name="class">
+                                                <option value="E">Economy Class</option>
+                                                <option value="B">Business Class</option>
+                                                <option value="PE">Premium Economy</option>
+                                                <option value="PB">Premium Business</option>
+                                                <option value="F">First Class</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <!--/span-->
+                                    <div class="col-md-3">
+                                         <div class="form-group">
+                                            <label class="text-uppercase">Preferred Airline</label>
+                                            <select name="prefairline[]" id="prefairline" class="form-control selectpicker" multiple data-actions-box="true">
+												<option value="SG">SpiceJet</option>
+												<option value="6E">Indigo</option>
+												<option value="G8">GoFIRST</option>
+												<option value="UK">Vistara</option>
+												<option value="AI">Air India</option>
+												<option value="I5">AirAsia India</option>
+											</select> 
+                                        </div>
+                                    </div>
+                                    <!--/span-->
+									<div class="col-md-3">
+										<div class="form-group pt-4">
+											<div class="custom-control custom-checkbox mr-sm-2 pt-3">
+												<input type="checkbox" class="custom-control-input" id="groupReqCheckbox1" value="check">
+												<label class="custom-control-label" for="groupReqCheckbox1">Show Direct Flights Only</label>
+											</div>
+										</div>
+									</div>
+									<div class="col-md-3">
+										<div class="form-actions">
+											<label class="text-uppercase">&nbsp;</label>
+
+											<button type="submit" class="btn btn-info btn-block"><i class="mdi mdi-account-multiple"></i> Send Group Request</button>
+										</div>
+									</div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                
+                            </div>
+                        </form>
+                    </div>
+
+                    <div class="tab-pane pt-3" id="multiStop" role="tabpanel">
+						
+					<form method="POST" action="index.php?pg=flight-results-multistep" id="multiStopsearch"> 
+						<div class="d-flex m-b-40 align-items-center no-block">
+							<input type="hidden" name="flightMultiStopSearch" value="1" />
+							<input type="hidden" name="segmentLength" id="segmentLength" value="0" />
+							<input type="hidden" id="originMultiHidden" name="originMultiHidden" value=""/>
+							<input type="hidden" id="departMultiHidden" name="departMultiHidden" value=""/>
+						<input type="hidden" id="destinationMultiHidden" name="destinationMultiHidden" value=""/>
+						</div>
+						
+                        
+                            <div class="form-body">
+                                <div class="row">
+                                    <div class="col-md-3">
+                                        <div class="form-group">
+                                            <label class="control-label">DEPARTURE</label><a href="javascript:" role="button" onclick="swapValmultiStep();"> <i class="float-right mdi-rotate-3d mdi "></i></a>
+                                            <div class="easy-autocomplete eac-Funky" style="width: 218.333px;">
+											<input type="text" class="form-control valid" name="origin" id="departureMulti" placeholder="Departure" value="Delhi (DEL)" autocomplete="off">
+											<div class="easy-autocomplete-container" id="eac-container-template-icon-rightMulti">
+												<ul id="departureUlMulti" style="display:none;">
+													<div class="eac-category">POPULAR CITIES</div>
+													<li data-value="Mumbai (BOM)"><div class="eac-item">Mumbai, India
+													<p class="font12 greyText appendBottom3"> Chhatrapati Shivaji International Airport</p>
+													<span>BOM</span></div></li>
+													<li data-value="Delhi (DEL)"><div class="eac-item">Delhi, India
+													<p class="font12 greyText appendBottom3"> Delhi Airport</p>
+													<span>DEL</span></div></li>
+													<li data-value="Bangalore (BLR)"><div class="eac-item">Bangalore, India
+													<p class="font12 greyText appendBottom3"> Kempegowda International Airport</p>
+													<span>BLR</span></div></li>
+													<li data-value="Kolkata (CCU)"><div class="eac-item">Kolkata, India
+													<p class="font12 greyText appendBottom3"> Netaji Subhash Chandra Bose International Airport</p>
+													<span>CCU</span></div></li>
+													<li data-value="Hyderabad (HYD)"><div class="eac-item">Hyderabad, India
+													<p class="font12 greyText appendBottom3"> Rajiv Gandhi International Airport</p>
+													<span>HYD</span></div></li>
+													
+													
+													
+												</ul>
+												<ul id="departuredynamicUlMulti" style="display:none;"></ul>
+												</div>
+											</div>
+                                        </div>
+                                    </div>
+                                    <!--/span-->
+                                    <div class="col-md-3">
+                                        <div class="form-group">
+                                            <label class="control-label">ARRIVAL</label> 
+                                            <div class="easy-autocomplete eac-Funky" style="width: 218.333px;">
+												<input class="form-control valid" name="destination" id="arrivalMulti" placeholder="Arrival" value="Jaipur (JAI)" autocomplete="off">
+												<div class="easy-autocomplete-container" id="eac-container-template-icon-rightMulti">
+												<ul id="arrivalUlMulti" style="display:none;">
+													<div class="eac-category">POPULAR CITIES</div>
+													<li data-value="Mumbai (BOM)"><div class="eac-item">Mumbai, India
+													<p class="font12 greyText appendBottom3"> Chhatrapati Shivaji International Airport</p>
+													<span>BOM</span></div></li>
+													<li data-value="Delhi (DEL)"><div class="eac-item">Delhi, India
+													<p class="font12 greyText appendBottom3"> Delhi Airport</p>
+													<span>DEL</span></div></li>
+													<li data-value="Bangalore (BLR)"><div class="eac-item">Bangalore, India
+													<p class="font12 greyText appendBottom3"> Kempegowda International Airport</p>
+													<span>BLR</span></div></li>
+													<li data-value="Kolkata (CCU)"><div class="eac-item">Kolkata, India
+													<p class="font12 greyText appendBottom3"> Netaji Subhash Chandra Bose International Airport</p>
+													<span>CCU</span></div></li>
+													<li data-value="Hyderabad (HYD)"><div class="eac-item">Hyderabad, India
+													<p class="font12 greyText appendBottom3"> Rajiv Gandhi International Airport</p>
+													<span>HYD</span></div></li>
+													
+													
+												</ul>
+												<ul id="arrivaldynamicUlMulti" style="display:none;"></ul>
+												</div>
+											</div>
+                                        </div>
+                                    </div>
+                                    <!--/span-->
+                                    <div class="col-md-3">
+                                        <div class="form-group">
+                                            <label class="control-label">LEAVE ON</label>
+                                            <input type="text" class="form-control mdate" placeholder="LEAVE ON" value="06-08-2025" id="leavedateMulti" name="leavedate">
+                                        </div>
+                                    </div>
+                                    <!--/span-->
+                                    <div class="col-md-3">
+										<div class="form-actions">
+                                            <label class="text-uppercase">&nbsp;</label>
+                                            <button id="addItenary" type="button" class="btn btn-info btn-block"><i class="mdi"></i> Add</button>
+                                        </div>
+                                       
+                                    </div>
+                                    <!--/span-->
+                                </div>
+								<div class="row" id="MySgInfo">
+									
+								
+								</div>
+                                <!--/row-->
+                                <div class="row">
+                                    <div class="col-sm-3 col-lg-3 travellers-classMulti form-group">
+                                        <label>FLYER DETAILS</label>
+										<input type="text" id="flightTravellersClassMulti" class="travellers-class-input form-control" name="flight-travellers-class" placeholder="Travellers, Class" value="1 Pax- Economy Class" readonly="" required="" onkeypress="return false;">
+										<input type="hidden" id="passengersMulti" value="1" readonly="">
+										<input type="hidden" id="classTypeMulti" value="Economy Class" readonly="">
+										<div class="travellers-dropdown MultiStepdropdown" style="display: none;">
+											<div class="row align-items-center">
+												<div class="col-sm-7">
+													<p class="mb-sm-0">Adults <small class="text-muted">(12+ yrs)</small></p>
+												</div>
+												<div class="col-sm-5">
+													<div class="qty input-group number-spinnerMulti">
+														<div class="input-group-prepend">
+															<button type="button" class="btn bg-light-4" data-value="decrease" data-target="#flightAdult-travellers" data-toggle="spinner" data-dir="dwn">-</button>
+														</div>
+														<input type="text" data-ride="spinner" name="paxadult" id="adult" class="qty-spinner form-control paxadultMulti" value="1" max=9 min=1 readonly="">
+														<div class="input-group-append">
+															<button type="button" class="btn bg-light-4" data-value="increase" data-target="#flightAdult-travellers" data-toggle="spinner" data-dir="up">+</button>
+														</div>
+													</div>
+												</div>
+											</div>
+											<hr class="my-2">
+											<div class="row align-items-center">
+												<div class="col-sm-7">
+													<p class="mb-sm-0">Children <small class="text-muted">(2-12 yrs)</small></p>
+												</div>
+												<div class="col-sm-5">
+													<div class="qty input-group number-spinnerMulti">
+														<div class="input-group-prepend">
+															<button type="button" class="btn bg-light-4" data-value="decrease" data-target="#flightChildren-travellers" data-toggle="spinner" data-dir="dwn">-</button>
+														</div>
+														<input type="text" data-ride="spinner" name="paxchild" id="child" class="qty-spinner form-control paxchildMulti" value="0" max=8 min=0 readonly="">
+														<div class="input-group-append">
+															<button type="button" class="btn bg-light-4" data-value="increase" data-target="#flightChildren-travellers" data-toggle="spinner" data-dir="up">+</button>
+														</div>
+													</div>
+												</div>
+											</div>
+											<hr class="my-2">
+											<div class="row align-items-center">
+												<div class="col-sm-7">
+													<p class="mb-sm-0">Infants <small class="text-muted">(Below 2 yrs)</small></p>
+												</div>
+												<div class="col-sm-5">
+													<div class="qty input-group number-spinnerMulti">
+														<div class="input-group-prepend">
+															<button type="button" class="btn bg-light-4" data-value="decrease" data-target="#flightInfants-travellers" data-toggle="spinner" data-dir="dwn">-</button>
+														</div>
+														<input type="text" data-ride="spinner" name="paxinfant" id="infant" class="qty-spinner form-control paxinfantMulti" value="0" max=5 min=0 readonly="">
+														<div class="input-group-append">
+															<button type="button" class="btn bg-light-4" data-value="increase" data-target="#flightInfants-travellers" data-toggle="spinner" data-dir="up">+</button>
+														</div>
+													</div>
+												</div>
+											</div>
+											<hr class="mt-2">
+											<div class="mb-3">
+												<div class="custom-control custom-radio">
+													<input id="flightClassEconomicMulti" name="class" class="flight-classMulti custom-control-input" value="E" checked="" required="" type="radio" data-val="Economy Class">
+													<label class="custom-control-label" for="flightClassEconomicMulti">Economy Class</label>
+												</div>
+												<div class="custom-control custom-radio">
+													<input id="flightClassPremiumEconomicMulti" name="class" class="flight-classMulti custom-control-input" value="B" required="" type="radio" data-val="Business Class">
+													<label class="custom-control-label" for="flightClassPremiumEconomicMulti">Business Class</label>
+												</div>
+												<div class="custom-control custom-radio">
+													<input id="flightClassBusinessMulti" name="class" class="flight-classMulti custom-control-input" value="PE" required="" type="radio" data-val="Premium Economy">
+													<label class="custom-control-label" for="flightClassBusinessMulti">Premium Economy</label>
+												</div>
+												<div class="custom-control custom-radio">
+													<input id="flightClassPremiumBusinessClassMulti" name="class" class="flight-classMulti custom-control-input" value="PB" required="" type="radio" data-val="Premium Business">
+													<label class="custom-control-label" for="flightClassPremiumBusinessClassMulti">Premium Business</label>
+												</div>
+												<div class="custom-control custom-radio">
+													<input id="flightClassFirstClassMulti" name="class" class="flight-classMulti custom-control-input" value="F" required="" type="radio" data-val="First Class">
+													<label class="custom-control-label" for="flightClassFirstClassMulti">First Class</label>
+												</div>
+											</div>
+											<button class="btn btn-primary btn-block submit-doneMulti" type="button">Done</button>
+										</div>
+										
+						
+                                    </div>
+                                    <div class="col-md-3">
+                                        <div class="form-group">
+                                            <label class="text-uppercase">Preferred Airline</label>
+                                            <select name="prefairline[]" id="prefairline" class="form-control selectpicker" multiple data-actions-box="true">
+												<option value="SG">SpiceJet</option>
+												<option value="6E">Indigo</option>
+												<option value="G8">GoFIRST</option>
+												<option value="UK">Vistara</option>
+												<option value="AI">Air India</option>
+												<option value="I5">AirAsia India</option>
+											</select> 
+                                        </div>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <div class="form-group pt-4">
+                                            
+                                        </div>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <div class="form-actions">
+                                            <label class="text-uppercase">&nbsp;</label>
+                                            <button type="submit" class="btn btn-info btn-block"><i class="mdi mdi-airplane-takeoff" ></i> Search Flights</button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!--/row-->
+                                <!--/row-->
+                            </div>
+                        </form>
+                    </div>
+					
+											<script>
+						   var user_busy_days = [];
+						   						</script>
+
+					
+					<div class="tab-pane pt-3" id="farefixSearch" role="tabpanel">
+						<div class="d-flex m-b-40 align-items-center no-block">
+                            <h5 class="card-title d-none d-lg-block">Farefix Flight Search</h5>
+                            <div class="ml-auto">
+                               
+                            </div>
+                        </div>
+						<form method="POST" action="index.php?pg=flight-results-specialflight" id="farefixSpecialsearch"> 
+							<input type="hidden" name="flightSearch" value="1" />
+							<input type="hidden" name="choose-travel" value="1" />
+						
+                        
+                            <div class="form-body">
+                                <div class="row">
+									<div class="col-md-2">
+                                        <div class="form-group">
+                                            <label class="control-label">Sector</label>
+                                            <div class="easy-autocomplete eac-Funky"  > <!-- removed width: 218.333px by jpr -->
+											<input type="text" class="form-control valid" name="sector" id="sector" placeholder="Enter City Name" value="" autocomplete="off" required>
+											<div class="easy-autocomplete-container" id="eac-container-template-icon-right">
+												<ul id="sectorUl" style="display:none;height:270px;overflow-y:scroll;">
+													<div class="eac-category">POPULAR CITIES</div>
+																										
+													
+													
+												</ul>
+												
+												<ul id="sectordynamicUl" style="display:none;"></ul>
+												</div>
+											</div>
+                                        </div>
+                                    </div>
+                                   
+									<div class="col-md-2">
+                                        <div class="form-group" id="farefixstepLeaveOn">
+                                            <label class="control-label">LEAVE ON</label>
+                                            <input type="text" class="form-control" placeholder="LEAVE ON" value="06-08-2025" id="leaveSpecialdate" name="leaveSpecialdate" onkeydown="return false" >
+                                        </div>
+                                    </div>
+									<div class="col-sm-3 col-lg-3 travellers-classfareFix form-group">
+                                        <label>FLYER DETAILS</label>
+										<input type="text" id="flightTravellersClassfareFix" class="travellers-class-input form-control" name="flight-travellers-class" placeholder="Travellers, Class" value="1 Pax - Economy Class" readonly="" required="" onkeypress="return false;">
+										<input type="hidden" id="passengersfareFix" value="1" readonly="">
+										<input type="hidden" id="classTypefareFix" value="Economy Class" readonly="">
+										<div class="travellers-dropdown fareFixdropdown" style="display: none;">
+											<div class="row align-items-center">
+												<div class="col-sm-7">
+													<p class="mb-sm-0">Adults <small class="text-muted">(12+ yrs)</small></p>
+												</div>
+												<div class="col-sm-5">
+													<div class="qty input-group number-spinnerfareFix">
+														<div class="input-group-prepend">
+															<button type="button" class="btn bg-light-4" data-value="decrease" data-target="#flightAdult-travellers" data-toggle="spinner" data-dir="dwn">-</button>
+														</div>
+														<input type="text" data-ride="spinner" name="paxadult" id="adult" class="qty-spinner form-control paxadultfareFix" value="1" max=9 min=1 readonly="">
+														<div class="input-group-append">
+															<button type="button" class="btn bg-light-4" data-value="increase" data-target="#flightAdult-travellers" data-toggle="spinner" data-dir="up">+</button>
+														</div>
+													</div>
+												</div>
+											</div>
+											<hr class="my-2">
+											<div class="row align-items-center">
+												<div class="col-sm-7">
+													<p class="mb-sm-0">Children <small class="text-muted">(2-12 yrs)</small></p>
+												</div>
+												<div class="col-sm-5">
+													<div class="qty input-group number-spinnerfareFix">
+														<div class="input-group-prepend">
+															<button type="button" class="btn bg-light-4" data-value="decrease" data-target="#flightChildren-travellers" data-toggle="spinner" data-dir="dwn">-</button>
+														</div>
+														<input type="text" data-ride="spinner" name="paxchild" id="child" class="qty-spinner form-control paxchildfareFix" value="0" max=8 min=0 readonly="">
+														<div class="input-group-append">
+															<button type="button" class="btn bg-light-4" data-value="increase" data-target="#flightChildren-travellers" data-toggle="spinner" data-dir="up">+</button>
+														</div>
+													</div>
+												</div>
+											</div>
+											<hr class="my-2">
+											<div class="row align-items-center">
+												<div class="col-sm-7">
+													<p class="mb-sm-0">Infants <small class="text-muted">(Below 2 yrs)</small></p>
+												</div>
+												<div class="col-sm-5">
+													<div class="qty input-group number-spinnerfareFix">
+														<div class="input-group-prepend">
+															<button type="button" class="btn bg-light-4" data-value="decrease" data-target="#flightInfants-travellers" data-toggle="spinner" data-dir="dwn">-</button>
+														</div>
+														<input type="text" data-ride="spinner" name="paxinfant" id="infant" class="qty-spinner form-control paxinfantfareFix" value="0" max=5 min=0 readonly="">
+														<div class="input-group-append">
+															<button type="button" class="btn bg-light-4" data-value="increase" data-target="#flightInfants-travellers" data-toggle="spinner" data-dir="up">+</button>
+														</div>
+													</div>
+												</div>
+											</div>
+											<hr class="mt-2">
+											<div class="mb-3">
+												<div class="custom-control custom-radio">
+													<input id="flightClassEconomicfareFix" name="class" class="flight-classfareFix custom-control-input" value="E" checked="" required="" type="radio" data-val="Economy Class">
+													<label class="custom-control-label" for="flightClassEconomicfareFix">Economy Class</label>
+												</div>
+												<!--<div class="custom-control custom-radio">
+													<input id="flightClassPremiumEconomicfareFix" name="class" class="flight-classfareFix custom-control-input" value="B" required="" type="radio" data-val="Business Class">
+													<label class="custom-control-label" for="flightClassPremiumEconomicfareFix">Business Class</label>
+												</div>
+												<div class="custom-control custom-radio">
+													<input id="flightClassBusinessfareFix" name="class" class="flight-classfareFix custom-control-input" value="PE" required="" type="radio" data-val="Premium Economy">
+													<label class="custom-control-label" for="flightClassBusinessfareFix">Premium Economy</label>
+												</div>
+												<div class="custom-control custom-radio">
+													<input id="flightClassPremiumBusinessClassfareFix" name="class" class="flight-classfareFix custom-control-input" value="PB" required="" type="radio" data-val="Premium Business">
+													<label class="custom-control-label" for="flightClassPremiumBusinessClassfareFix">Premium Business</label>
+												</div>
+												<div class="custom-control custom-radio">
+													<input id="flightClassFirstClassfareFix" name="class" class="flight-classfareFix custom-control-input" value="F" required="" type="radio" data-val="First Class">
+													<label class="custom-control-label" for="flightClassFirstClassfareFix">First Class</label>
+												</div>-->
+											</div>
+											<button class="btn btn-primary btn-block submit-donefareFix" type="button">Done</button>
+										</div>
+										
+						
+                                    </div>
+                                    
+									<div class="col-md-3">
+                                        <div class="form-actions">
+                                            <label class="text-uppercase">&nbsp;</label>
+                                            <button type="submit" class="btn btn-info btn-block"><i class="mdi mdi-airplane-takeoff"></i> Search Flights</button>
+                                        </div>
+                                    </div>
+                                    
+                                </div>
+                                <!--/row-->
+                                <div class="row">
+                                    
+                                   
+                                   
+                                </div>
+                                <!--/row-->
+                                <!--/row-->
+                            </div>
+                        </form>
+                    </div>
+                    
+					<div class="tab-pane pt-3" id="cheapest" role="tabpanel">
+                        <div class="d-flex m-b-40 align-items-center no-block">
+                            <h5 class="card-title d-none d-lg-block">Cheapest Flight Search</h5>
+                            <div class="ml-auto">
+                                <ul class="list-inline icheck-list">
+                                    <li>
+                                        <input tabindex="7" type="radio" class="check" id="normalminimal-radio-1" data-radio="iradio_flat-blue" name="choose-travel" value="1" checked>
+                                        <label for="normalminimal-radio-1">Oneway</label>
+                                    </li>
+                                    <li>
+										<input tabindex="8" type="radio" class="check" id="normalminimal-radio-2" data-radio="iradio_flat-blue" name="choose-travel" value="2" disabled>
+                                        <label for="normalminimal-radio-2">Round Trip</label>
+                                    </li>
+                                    <li>
+                                        <input tabindex="9" type="radio" class="check" id="normalminimal-radio-3" data-radio="iradio_flat-blue" name="choose-travel" value="3" disabled>
+                                        <label for="normalminimal-radio-3">Round Trip Spl</label>
+                                    </li>
+                                </ul> 
+                            </div>
+                        </div>
+														<form method="POST" action="index.php?pg=flight-results-cheap" id="cheapsearch">  
+							                        	
+								<input type="hidden" name="paxadult" value="1" />
+								<input type="hidden" name="flightSearch" value="1" />
+								<input type="hidden" name="choose-travel" value="1" />
+                            <div class="form-body">
+                                <div class="row">
+                                    <div class="col-md-3">
+                                        <div class="form-group">
+                                            <label class="control-label">DEPARTURE</label><a href="javascript:" role="button" onclick="swapValCheap();"> <i class="float-right mdi-rotate-3d mdi "></i></a>
+                                            <div class="easy-autocomplete eac-Funky">
+											<input type="text" class="form-control valid" name="origin" id="departureCheap" placeholder="Departure" value="Delhi (DEL)" autocomplete="off">
+											<div class="easy-autocomplete-container" id="eac-container-template-icon-rightCheap">
+												<ul id="departureUlCheap" style="display:none;">
+													<div class="eac-category">POPULAR CITIES</div>
+													<li data-value="Mumbai (BOM)"><div class="eac-item">Mumbai, India
+													<p class="font12 greyText appendBottom3"> Chhatrapati Shivaji International Airport</p>
+													<span>BOM</span></div></li>
+													<li data-value="Delhi (DEL)"><div class="eac-item">Delhi, India
+													<p class="font12 greyText appendBottom3"> Delhi Airport</p>
+													<span>DEL</span></div></li>
+													<li data-value="Bangalore (BLR)"><div class="eac-item">Bangalore, India
+													<p class="font12 greyText appendBottom3"> Kempegowda International Airport</p>
+													<span>BLR</span></div></li>
+													<li data-value="Kolkata (CCU)"><div class="eac-item">Kolkata, India
+													<p class="font12 greyText appendBottom3"> Netaji Subhash Chandra Bose International Airport</p>
+													<span>CCU</span></div></li>
+													<li data-value="Hyderabad (HYD)"><div class="eac-item">Hyderabad, India
+													<p class="font12 greyText appendBottom3"> Rajiv Gandhi International Airport</p>
+													<span>HYD</span></div></li>
+													
+													
+													
+												</ul>
+												<ul id="departuredynamicUlCheap" style="display:none;"></ul>
+												</div>
+											</div>
+                                        </div>
+                                    </div>
+                                    <!--/span-->
+                                    <div class="col-md-3">
+                                         <div class="form-group">
+                                            <label class="control-label">ARRIVAL</label> 
+                                            <div class="easy-autocomplete eac-Funky">
+												<input class="form-control valid" name="destination" id="arrivalCheap" placeholder="Arrival" value="Jaipur (JAI)" autocomplete="off">
+												<div class="easy-autocomplete-container" id="eac-container-template-icon-rightCheap">
+												<ul id="arrivalUlCheap" style="display:none;">
+													<div class="eac-category">POPULAR CITIES</div>
+													<li data-value="Mumbai (BOM)"><div class="eac-item">Mumbai, India
+													<p class="font12 greyText appendBottom3"> Chhatrapati Shivaji International Airport</p>
+													<span>BOM</span></div></li>
+													<li data-value="Delhi (DEL)"><div class="eac-item">Delhi, India
+													<p class="font12 greyText appendBottom3"> Delhi Airport</p>
+													<span>DEL</span></div></li>
+													<li data-value="Bangalore (BLR)"><div class="eac-item">Bangalore, India
+													<p class="font12 greyText appendBottom3"> Kempegowda International Airport</p>
+													<span>BLR</span></div></li>
+													<li data-value="Kolkata (CCU)"><div class="eac-item">Kolkata, India
+													<p class="font12 greyText appendBottom3"> Netaji Subhash Chandra Bose International Airport</p>
+													<span>CCU</span></div></li>
+													<li data-value="Hyderabad (HYD)"><div class="eac-item">Hyderabad, India
+													<p class="font12 greyText appendBottom3"> Rajiv Gandhi International Airport</p>
+													<span>HYD</span></div></li>
+													
+													
+												</ul>
+												<ul id="arrivaldynamicUlCheap" style="display:none;"></ul>
+												</div>
+											</div>
+                                        </div>
+                                    </div>
+                                    <!--/span-->
+									<div class="col-md-3">
+                                        <div class="form-group">
+                                            <label class="control-label">LEAVE ON</label>
+                                            <input type="text" class="form-control mdate" placeholder="LEAVE ON" value="06-08-2025" id="leavedateCheap" name="leavedate">
+                                        </div>
+                                    </div>
+									<div class="col-md-3">
+                                        <div class="form-group">
+                                            <label class="text-uppercase">Fare Type</label>
+                                            <select class="form-control custom-select" name="cheapest_fare">
+												<option value="all">All Fares</option>
+                                                <option value="Success">Executive Fares</option>
+                                                <option value="Warning">Coupon Fares</option>
+                                                <option value="Danger">SME Fares</option>
+                                                <option value="Light">General Fares</option>
+                                               
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!--/row-->
+                               
+                                <!--/row-->
+                                <!--/row-->
+                                <!--/row-->
+                                <div class="row">
+                                   <div class="col-sm-3 col-lg-3 travellers-classCheap form-group">
+                                        <label>FLYER DETAILS</label>
+										<input type="text" id="flightTravellersClassCheap" class="travellers-class-input form-control" name="flight-travellers-class" placeholder="Travellers, Class" value="1 Pax - Economy Class" readonly="" required="" onkeypress="return false;">
+										<input type="hidden" id="passengersCheap" value="1" readonly="">
+										<input type="hidden" id="classTypeCheap" value="Economy Class" readonly="">
+										<div class="travellers-dropdown CheapStepdropdown" style="display: none;">
+											<div class="row align-items-center">
+												<div class="col-sm-7">
+													<p class="mb-sm-0">Adults <small class="text-muted">(12+ yrs)</small></p>
+												</div>
+												<div class="col-sm-5">
+													<div class="qty input-group number-spinnerCheap">
+														<div class="input-group-prepend">
+															<button type="button" class="btn bg-light-4" data-value="decrease" data-target="#flightAdult-travellers" data-toggle="spinner" data-dir="dwn">-</button>
+														</div>
+														<input type="text" data-ride="spinner" name="paxadult" id="adult" class="qty-spinner form-control paxadultCheap" value="1" max=9 min=1 readonly="">
+														<div class="input-group-append">
+															<button type="button" class="btn bg-light-4" data-value="increase" data-target="#flightAdult-travellers" data-toggle="spinner" data-dir="up">+</button>
+														</div>
+													</div>
+												</div>
+											</div>
+											<hr class="my-2">
+											<div class="row align-items-center">
+												<div class="col-sm-7">
+													<p class="mb-sm-0">Children <small class="text-muted">(2-12 yrs)</small></p>
+												</div>
+												<div class="col-sm-5">
+													<div class="qty input-group number-spinnerCheap">
+														<div class="input-group-prepend">
+															<button type="button" class="btn bg-light-4" data-value="decrease" data-target="#flightChildren-travellers" data-toggle="spinner" data-dir="dwn">-</button>
+														</div>
+														<input type="text" data-ride="spinner" name="paxchild" id="child" class="qty-spinner form-control paxchildCheap" value="0" max=8 min=0 readonly="">
+														<div class="input-group-append">
+															<button type="button" class="btn bg-light-4" data-value="increase" data-target="#flightChildren-travellers" data-toggle="spinner" data-dir="up">+</button>
+														</div>
+													</div>
+												</div>
+											</div>
+											<hr class="my-2">
+											<div class="row align-items-center">
+												<div class="col-sm-7">
+													<p class="mb-sm-0">Infants <small class="text-muted">(Below 2 yrs)</small></p>
+												</div>
+												<div class="col-sm-5">
+													<div class="qty input-group number-spinnerCheap">
+														<div class="input-group-prepend">
+															<button type="button" class="btn bg-light-4" data-value="decrease" data-target="#flightInfants-travellers" data-toggle="spinner" data-dir="dwn">-</button>
+														</div>
+														<input type="text" data-ride="spinner" name="paxinfant" id="infant" class="qty-spinner form-control paxinfantCheap" value="0" max=5 min=0 readonly="">
+														<div class="input-group-append">
+															<button type="button" class="btn bg-light-4" data-value="increase" data-target="#flightInfants-travellers" data-toggle="spinner" data-dir="up">+</button>
+														</div>
+													</div>
+												</div>
+											</div>
+											<hr class="mt-2">
+											<div class="mb-3">
+												<div class="custom-control custom-radio">
+													<input id="flightClassEconomicCheap" name="class" class="flight-classCheap custom-control-input" value="E" checked="" required="" type="radio" data-val="Economy Class">
+													<label class="custom-control-label" for="flightClassEconomicCheap">Economy Class</label>
+												</div>
+												<div class="custom-control custom-radio">
+													<input id="flightClassPremiumEconomicCheap" name="class" class="flight-classCheap custom-control-input" value="B" required="" type="radio" data-val="Business Class">
+													<label class="custom-control-label" for="flightClassPremiumEconomicCheap">Business Class</label>
+												</div>
+												<div class="custom-control custom-radio">
+													<input id="flightClassBusinessCheap" name="class" class="flight-classCheap custom-control-input" value="PE" required="" type="radio" data-val="Premium Economy">
+													<label class="custom-control-label" for="flightClassBusinessCheap">Premium Economy</label>
+												</div>
+												<div class="custom-control custom-radio">
+													<input id="flightClassPremiumBusinessClassCheap" name="class" class="flight-classCheap custom-control-input" value="PB" required="" type="radio" data-val="Premium Business">
+													<label class="custom-control-label" for="flightClassPremiumBusinessClassCheap">Premium Business</label>
+												</div>
+												<div class="custom-control custom-radio">
+													<input id="flightClassFirstClassCheap" name="class" class="flight-classCheap custom-control-input" value="F" required="" type="radio" data-val="First Class">
+													<label class="custom-control-label" for="flightClassFirstClassCheap">First Class</label>
+												</div>
+											</div>
+											<button class="btn btn-primary btn-block submit-doneCheap" type="button">Done</button>
+										</div>
+										
+						
+                                    </div>
+                                    
+                                    <!--/span-->
+                                    <div class="col-md-3">
+                                         <div class="form-group">
+                                            <label class="text-uppercase">Preferred Airline</label>
+                                            <select name="prefairline[]" id="prefairline" class="form-control selectpicker" multiple data-actions-box="true">
+												<option value="SG">SpiceJet</option>
+												<option value="6E">Indigo</option>
+												<option value="G8">GoFIRST</option>
+												<option value="UK">Vistara</option>
+												<option value="AI">Air India</option>
+												<option value="I5">AirAsia India</option>
+											</select> 
+                                        </div>
+                                    </div>
+                                    <!--/span-->
+									<div class="col-md-3">
+										<div class="form-group pt-4">
+											<div class="custom-control custom-checkbox mr-sm-2 pt-3">
+												<input type="checkbox" class="custom-control-input" id="cheapReqCheckbox1" value="check">
+												<label class="custom-control-label" for="cheapReqCheckbox1">Show Direct Flights Only</label>
+											</div>
+										</div>
+									</div>
+									<div class="col-md-3">
+										<div class="form-actions">
+											<label class="text-uppercase">&nbsp;</label>
+
+											<button type="submit" class="btn btn-info btn-block"><i class="mdi mdi-airplane-takeoff"></i> Find Cheapest Flight</button>
+										</div>
+									</div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                
+                            </div>
+                        </form>
+                    </div>
+
+					
+					<div class="tab-pane pt-3" id="voiceS" role="tabpanel">
+                        <div class="col-12">
+							<div class="input-group mb-3">
+								<input type="text" class="form-control" placeholder="Try Saying - Delhi to Mumbai for 2 adults and 1 child on the 23rd of April 2021" aria-label="" aria-describedby="basic-addon1" disabled="true">
+								<div class="input-group-append">
+									<button class="btn btn-info" type="button" data-toggle="tooltip" data-placement="top" title="Not compatible with your device"><i class="mdi mdi-microphone"></i></button>
+								</div>
+							</div>
+						</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    	<!-- For Dinesh Enjoya : Select distinct ORIGN/DEST/DATE -->
+<div class="offset-md-1 col-md-10 mb-3">
+    <label>Recent Searches:</label>
+            <span class="badge badge-info recent-search"
+              data-from="Delhi (DEL)"
+              data-to="Jaipur (JAI)"
+              data-leave="05-08-2025"
+              data-return=""
+              
+              style="cursor:pointer;">
+            <i class="mdi mdi-airplane-takeoff"></i> DEL to JAI (05-08-2025)
+        </span> 
+            <span class="badge badge-info recent-search"
+              data-from="Bikaner (BKB)"
+              data-to="Jaipur (JAI)"
+              data-leave="17-08-2025"
+              data-return=""
+              
+              style="cursor:pointer;">
+            <i class="mdi mdi-airplane-takeoff"></i> BKB to JAI (17-08-2025)
+        </span> 
+    </div>
+ 
+<script>
+document.querySelectorAll('.recent-search').forEach(badge => {
+    badge.addEventListener('click', () => {
+        document.getElementById('departure').value = badge.dataset.from;
+        document.getElementById('arrival').value = badge.dataset.to;
+        document.getElementById('leavedate').value = badge.dataset.leave;
+        document.getElementById('returndate').value = badge.dataset.return;
+        //document.getElementById('adult').value = badge.dataset.adult;
+        //document.getElementById('child').value = badge.dataset.child;
+        ///document.getElementById('infant').value = badge.dataset.infant;
+        /*document.querySelectorAll("input[name='class']").forEach(cls => {
+            cls.checked = (cls.value === badge.dataset.class);
+        });*/
+    });
+});
+</script>
+	
+	<!-- Column -->
+    <div class="offset-md-1 col-md-10">
+        <div class="row">
+            <!-- Column -->
+            <div class="col-md-8">
+                <div class="card">
+                    <div class="card-body p-0">
+                        <div class="row">
+                            <div class="col-12 ">
+                                <div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
+                                    <div class="carousel-inner" role="listbox">
+										
+										<div class="carousel-inner" role="listbox">
+											<div class="carousel-item active"> <img class="img-fluid" src="assets/images/ff_2.jpg" alt="First slide"> </div>
+											<div class="carousel-item"> <img class="img-fluid" src="assets/images/ff_3.jpg" alt="Second slide"> </div>
+										   
+										</div>
+										
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Column -->
+            <div class="col-md-4">
+                <div class="card">
+                    <div id="live">
+                        <a href="?pg=my-flight-booking" class="text-dark"><div class="d-flex no-block p-20 align-items-center">
+                            <div class="round round-primary"><i class="mdi mdi-airplane-takeoff font-16" title="BTC"></i></div>
+                            <div class="m-l-10 ">
+                                <h5 class="m-b-0">My Flight Bookings</h5>
+                            </div>
+                        </div> </a>
+                        <hr class="m-b-0 m-t-0">
+                        <a href="?pg=calendar" class="text-dark"><div class="d-flex no-block p-20 align-items-center">
+                            <div class="round bg-inverse"><i class="mdi mdi-calendar-clock font-16" title="ETH"></i></div>
+                            <div class="m-l-10">
+                                <h5 class="m-b-0">Travel Calendar</h5>
+                            </div>
+                        </div></a>
+                        <hr class="m-b-0 m-t-0">
+                        <a href="?pg=agent-ledger" class="text-dark"><div class="d-flex no-block p-20 align-items-center">
+                            <div class="round round-danger"><i class="icon-note font-16 text-white" title="EOS"></i></div>
+                            <div class="m-l-10">
+                                <h5 class="m-b-0">Agent Ledger</h5>
+                            </div>
+                        </div></a>
+                        <hr class="m-b-0 m-t-0">
+                        <a href="?pg=bank-details" class="text-dark"><div class="d-flex no-block p-20 align-items-center">
+                            <div class="round round-success"><i class="icon-bag font-16 text-white" title="LTC"></i></div>
+                            <div class="m-l-10">
+                                <h5 class="m-b-0">Bank Details</h5>
+                            </div>
+                        </div></a>
+                    </div>
+                </div>
+            </div>
+            <!-- Column -->
+        </div>
+    </div>
+</div>
+<!-- <div class="card-group">
+    <div class="card">
+        <div class="card-body">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="d-flex no-block align-items-center">
+                        <div>
+                            <h3><i class="mdi mdi-airplane-takeoff"></i></h3>
+                            <p class="text-muted">My Flight Bookings</p>
+                        </div>
+                        <div class="ml-auto">
+                            <h2 class="counter text-primary">23</h2>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12">
+                    <div class="progress">
+                        <div class="progress-bar bg-primary" role="progressbar" style="width: 85%; height: 6px;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="card">
+        <div class="card-body">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="d-flex no-block align-items-center">
+                        <div>
+                            <h3><i class="mdi mdi-calendar-clock"></i></h3>
+                            <p class="text-muted">Travel Calendar</p>
+                        </div>
+                        <div class="ml-auto">
+                            <h2 class="counter text-primary">169</h2>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12">
+                    <div class="progress">
+                        <div class="progress-bar bg-primary" role="progressbar" style="width: 85%; height: 6px;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="card">
+        <div class="card-body">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="d-flex no-block align-items-center">
+                        <div>
+                            <h3><i class="icon-note"></i></h3>
+                            <p class="text-muted">Agent Ledger</p>
+                        </div>
+                        <div class="ml-auto">
+                            <h2 class="counter text-primary">157</h2>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12">
+                    <div class="progress">
+                        <div class="progress-bar bg-primary" role="progressbar" style="width: 85%; height: 6px;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="card">
+        <div class="card-body">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="d-flex no-block align-items-center">
+                        <div>
+                            <h3><i class="icon-bag"></i></h3>
+                            <p class="text-muted">Bank Details</p>
+                        </div>
+                        <div class="ml-auto">
+                            <h2 class="counter text-primary">431</h2>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12">
+                    <div class="progress">
+                        <div class="progress-bar bg-primary" role="progressbar" style="width: 85%; height: 6px;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div> -->
+
+
+
+<style type="text/css">
+.datepicker td{
+background:#fff;
+color:green;	
+}
+.datepicker td.day:hover{
+background:#fff !important;
+color:green !important;	
+}
+.datepicker td.disabled:hover{
+background:0 0 !important;
+color:#999 !important;	
+}
+.highlighted-cal-dates{
+background-color: #038fcd;	
+}
+.eac-item {
+    margin-top: 8px;
+    min-height: 24px;
+    position: relative;
+}
+.easy-autocomplete-container ul li{
+	padding: 4px 12px !important;
+}
+.easy-autocomplete-container ul li div {
+    display: block;
+    font-weight: normal;
+    word-break: break-all;
+}
+.easy-autocomplete-container ul .eac-category {
+    font-style: unset !important;
+    font-weight: 800 !important;
+    color: #9b9b9b;
+	padding: 4px 12px !important;
+}
+.eac-item span {
+    margin-left: 4px;
+    max-height: 30px;
+    position: absolute;
+    right: -4px;
+    top: 0px;
+}
+.latoBlack {
+    font-weight: 800;
+}
+.font12 {
+    font-size: 12px;
+    line-height: 12px;
+}
+.greyText {
+    color:#9b9b9b;
+}
+.ul .eac-category {
+    background: inherit;
+    border-color: #ccc;
+    border-image: none;
+    border-style: solid;
+    border-width: 0 1px;
+    display: block;
+    font-size: 14px;
+    font-weight: normal;
+    padding: 4px 12px;
+}
+
+</style>
+<script type="text/javascript">
+$(document).ready(function() {
+	
+	$('.NormalTabSearch').on('click', function() {
+		$('#normalminimal-radio-1').iCheck('check');
+	});	
+	$('.SplDealTabSearch').on('click', function() {
+		$('#normalminimalDeal-radio-1').iCheck('check');
+	});	
+	
+		$("#prefairline_special").prop("disabled", true);
+		$('#normalminimal-radio-1').on('ifChecked', function(event){
+			$("#returndate").val('');
+			$("#returndate").prop("disabled", true);
+			$("#oneroundPreAirline").show();
+			$("#specialTripPreAirline").hide();
+			$("#prefairline_special").prop("disabled", true);
+		});
+		$('#normalminimal-radio-2').on('ifChecked', function(event){
+			$("#returndate").prop("disabled", false);
+			$("#oneroundPreAirline").show();
+			$("#specialTripPreAirline").hide();
+			$("#prefairline_special").prop("disabled", true);
+			
+		});
+		$('#normalminimal-radio-3').on('ifChecked', function(event){
+			$("#returndate").prop("disabled", false);
+			$("#oneroundPreAirline").hide();
+			$("#specialTripPreAirline").show();
+			$("#prefairline_special").prop("disabled", false);
+		});
+		$('#flightTravellersClass').on('click', function() {
+			$('.travellers-dropdown').slideToggle('fast');
+		});
+		$('#flightTravellersClassMulti').on('click', function() {
+			$('.MultiStepdropdown').slideToggle('fast');
+		});
+		$('#flightTravellersClassDeal').on('click', function() {
+			$('.DealStepdropdown').slideToggle('fast');
+		});
+		$('#flightTravellersClassCheap').on('click', function() {
+			$('.CheapStepdropdown').slideToggle('fast');
+		});
+		$('#flightTravellersClassfareFix').on('click', function() {
+			$('.fareFixdropdown').slideToggle('fast');
+		});
+	});
+//Departure and arrival js
+	function swapVal() {
+		var departureTmp = $("#departure").val();
+		$("#departure").val($("#arrival").val());
+		$("#arrival").val(departureTmp);
+		return false;
+	}
+	$(document).mouseup(function(e){
+		//$(".bs-select-all").trigger('click');
+		var container = $("#departureUl");
+		var container1 = $("#departuredynamicUl");
+		var container2 = $(".travellers-dropdown");
+		var container3 = $("#arrivalUl");
+		var container4 = $("#arrivaldynamicUl");
+		// If the target of the click isn't the container
+		if(!container.is(e.target) && container.has(e.target).length === 0){
+			container.hide();
+		}
+		if(!container1.is(e.target) && container1.has(e.target).length === 0){
+			container1.hide();
+		}
+		if(!container2.is(e.target) && container2.has(e.target).length === 0){
+			container2.hide();
+		}
+		if(!container3.is(e.target) && container3.has(e.target).length === 0){
+			container3.hide();
+		}
+		if(!container4.is(e.target) && container4.has(e.target).length === 0){
+			container4.hide();
+		}
+	});
+	
+	//Departure 
+		$("body").on("click",'ul#departuredynamicUl li', function(e){
+			e.preventDefault();
+			var $this = $(this);
+			$("#departure").addClass('valid');
+			$("#departure").val($this.data("value"));
+			$("#departuredynamicUl").hide();
+			$("#arrival").focus(); 
+		});
+		$(document).on('mouseenter','.easy-autocomplete-container ul#departuredynamicUl li',function(e){
+			$(this).addClass("selected");
+		});
+		$(document).on('mouseleave','.easy-autocomplete-container ul#departuredynamicUl li',function(e){
+			$(this).removeClass("selected");
+		});
+		//end departure
+		//arrival 
+		$("body").on("click",'ul#arrivaldynamicUl li', function(e){
+			e.preventDefault();
+			var $this = $(this);
+			$("#arrival").addClass('valid');
+			$("#arrival").val($this.data("value"));
+			$("#arrivaldynamicUl").hide();
+		});
+		$(document).on('mouseenter','.easy-autocomplete-container ul#arrivaldynamicUl li',function(e){
+			$(this).addClass("selected");
+		});
+		$(document).on('mouseleave','.easy-autocomplete-container ul#arrivaldynamicUl li',function(e){
+			$(this).removeClass("selected");
+		});
+		$(document).ready(function() {
+			$(".bs-select-all").trigger('click');
+			$('#departure').on('click', function() {
+				$(this).removeClass('valid');
+				$('#departureUl').slideToggle('fast');
+			});
+			$('#arrival').on('click', function() {
+				$(this).removeClass('valid');
+				$('#arrivalUl').slideToggle('fast');
+			});
+			$(".easy-autocomplete-container ul li").hover(
+			  function () {
+				$(this).addClass("selected");
+			  },
+			  function () {
+				$(this).removeClass("selected");
+			  }
+			);
+			
+			$("#departureUl li").on("click", function(e){
+				e.preventDefault();
+				var $this = $(this);
+				$("#departure").addClass('valid');
+				$("#departure").val($this.data("value"));
+				$("#departureUl").hide();
+				$("#arrival").focus(); 
+				
+			});
+			$("#arrivalUl li").on("click", function(e){
+				e.preventDefault();
+				var $this = $(this);
+				$("#arrival").addClass('valid');
+				$("#arrival").val($this.data("value"));
+				$("#arrivalUl").hide();
+			});
+			
+			$('#startsearch').on('submit', function(e){
+				
+				
+				if(!$("#departure").hasClass("valid")) {
+					toastr.error('Please enter a valid Source!', {timeOut: 5000});
+					//alert("Please enter a valid Source");
+					return false;
+				}
+				else if(!$("#arrival").hasClass("valid")) {
+					toastr.error('Please enter a valid Destin!', {timeOut: 5000});
+					return false;
+				}
+				else
+				{
+					var dateString = $('#leavedate').val(); 
+					var dateStringR=$('#returndate').val();
+					var valid=true;
+					var departstring=$('#departure').val();
+					var arrivestring=$('#arrival').val();
+					if(departstring=="" || arrivestring==""){
+					  valid=false;
+					  errortxt="Departure / Arrival Location cannot be empty";
+					  title="Source/Destination Required";
+					}
+
+					if(departstring==arrivestring){
+					  valid=false;
+					  errortxt="Departure / Arrival Location cannot be the same";
+					  title="Source/Destination Error";
+					}
+
+					if(dateStringR=="" && document.getElementById('returndate').disabled==false){
+						valid=false;
+						errortxt="Arrival Date cannot be empty";
+						title="Arrival date required";
+					}
+					if(dateString==""){
+						valid=false;
+						errortxt="Departure Date cannot be empty";
+						title="Departure Time required";
+					}
+					var x =parseInt($("#adult").val());
+					var y =parseInt($("#child").val());
+					var z =parseInt($("#infant").val());
+					var a = x + y ;
+					if(a > 9 ){
+						valid=false;
+						errortxt="Total Number of Passengers cannot be more than 9";
+						title="Passenger Limit Exceeded";
+					}
+					if( x < z ){
+
+						valid=false;
+						errortxt="Number of Infants should be less than Adults";
+						title="Infant Limit Exceeded";
+					}
+					if(valid){
+						var flightSearchType = $("input[name='choose-travel']:checked"). val();
+						
+						if(flightSearchType=='1'){
+							$("#startsearch").attr('action', 'index.php?pg=flight-results-oneway');
+						}
+						else if(flightSearchType=='2'){
+							$("#startsearch").attr('action', 'index.php?pg=flight-results-round');
+						}
+						else if(flightSearchType=='3'){
+							$("#startsearch").attr('action', 'index.php?pg=flight-results-special');
+						}
+						else
+						{
+							$("#startsearch").attr('action', 'index.php?pg=flight-results-round');
+						}
+						
+						return true;
+					}
+					else
+					{
+						toastr.error(errortxt, {timeOut: 5000});
+						return false;
+					}
+				}
+				
+				//$(".preloader").show();
+				
+				
+			});
+			
+			
+			
+			$('#onwaynew').on('submit', function(e){
+				
+				
+				if(!$("#departure").hasClass("valid")) {
+					toastr.error('Please enter a valid Source!', {timeOut: 5000});
+					//alert("Please enter a valid Source");
+					return false;
+				}
+				else if(!$("#arrival").hasClass("valid")) {
+					toastr.error('Please enter a valid Destin!', {timeOut: 5000});
+					return false;
+				}
+				else
+				{
+					var dateString = $('#leavedate').val(); 
+					var dateStringR=$('#returndate').val();
+					var valid=true;
+					var departstring=$('#departure').val();
+					var arrivestring=$('#arrival').val();
+					if(departstring=="" || arrivestring==""){
+					  valid=false;
+					  errortxt="Departure / Arrival Location cannot be empty";
+					  title="Source/Destination Required";
+					}
+
+					if(departstring==arrivestring){
+					  valid=false;
+					  errortxt="Departure / Arrival Location cannot be the same";
+					  title="Source/Destination Error";
+					}
+
+					if(dateStringR=="" && document.getElementById('returndate').disabled==false){
+						valid=false;
+						errortxt="Arrival Date cannot be empty";
+						title="Arrival date required";
+					}
+					if(dateString==""){
+						valid=false;
+						errortxt="Departure Date cannot be empty";
+						title="Departure Time required";
+					}
+					var x =parseInt($("#adult").val());
+					var y =parseInt($("#child").val());
+					var z =parseInt($("#infant").val());
+					var a = x + y ;
+					if(a > 9 ){
+						valid=false;
+						errortxt="Total Number of Passengers cannot be more than 9";
+						title="Passenger Limit Exceeded";
+					}
+					if( x < z ){
+
+						valid=false;
+						errortxt="Number of Infants should be less than Adults";
+						title="Infant Limit Exceeded";
+					}
+					if(valid){ 
+						var flightSearchType = $("input[name='choose-travel']:checked"). val();
+						
+						if(flightSearchType=='1'){
+							$("#onwaynew").attr('action', 'index.php?pg=flight-results-onewaynew');
+						}
+						else if(flightSearchType=='2'){
+							$("#onwaynew").attr('action', 'index.php?pg=flight-results-round');
+						}
+						else if(flightSearchType=='3'){
+							$("#onwaynew").attr('action', 'index.php?pg=flight-results-special');
+						}
+						else
+						{
+							$("#onwaynew").attr('action', 'index.php?pg=flight-results-round');
+						}
+						
+						return true;
+					}
+					else
+					{
+						toastr.error(errortxt, {timeOut: 5000});
+						return false;
+					}
+				}
+				
+				//$(".preloader").show();
+				
+				
+			});
+			
+			$('#onwaynewdinesh').on('submit', function(e){
+				
+				
+				if(!$("#departure").hasClass("valid")) {
+					toastr.error('Please enter a valid Source!', {timeOut: 5000});
+					//alert("Please enter a valid Source");
+					return false;
+				}
+				else if(!$("#arrival").hasClass("valid")) {
+					toastr.error('Please enter a valid Destin!', {timeOut: 5000});
+					return false;
+				}
+				else
+				{
+					var dateString = $('#leavedate').val(); 
+					var dateStringR=$('#returndate').val();
+					var valid=true;
+					var departstring=$('#departure').val();
+					var arrivestring=$('#arrival').val();
+					if(departstring=="" || arrivestring==""){
+					  valid=false;
+					  errortxt="Departure / Arrival Location cannot be empty";
+					  title="Source/Destination Required";
+					}
+
+					if(departstring==arrivestring){
+					  valid=false;
+					  errortxt="Departure / Arrival Location cannot be the same";
+					  title="Source/Destination Error";
+					}
+
+					if(dateStringR=="" && document.getElementById('returndate').disabled==false){
+						valid=false;
+						errortxt="Arrival Date cannot be empty";
+						title="Arrival date required";
+					}
+					if(dateString==""){
+						valid=false;
+						errortxt="Departure Date cannot be empty";
+						title="Departure Time required";
+					}
+					var x =parseInt($("#adult").val());
+					var y =parseInt($("#child").val());
+					var z =parseInt($("#infant").val());
+					var a = x + y ;
+					if(a > 9 ){
+						valid=false;
+						errortxt="Total Number of Passengers cannot be more than 9";
+						title="Passenger Limit Exceeded";
+					}
+					if( x < z ){
+
+						valid=false;
+						errortxt="Number of Infants should be less than Adults";
+						title="Infant Limit Exceeded";
+					}
+					if(valid){ 
+						var flightSearchType = $("input[name='choose-travel']:checked"). val();
+						
+						if(flightSearchType=='1'){
+							$("#onwaynew").attr('action', 'index.php?pg=flight-results-onewaydinesh');
+						}
+						else if(flightSearchType=='2'){
+							$("#onwaynew").attr('action', 'index.php?pg=flight-results-round');
+						}
+						else if(flightSearchType=='3'){
+							$("#onwaynew").attr('action', 'index.php?pg=flight-results-special');
+						}
+						else
+						{
+							$("#onwaynew").attr('action', 'index.php?pg=flight-results-round');
+						}
+						
+						return true;
+					}
+					else
+					{
+						toastr.error(errortxt, {timeOut: 5000});
+						return false;
+					}
+				}
+				
+				//$(".preloader").show();
+				
+				
+			});
+		});
+		var options = {
+			shouldSort: true,
+			threshold: 0.0,
+			maxPatternLength: 32,
+			minMatchCharLength: 3, 
+			  keys: [{
+				name: 'code',
+				weight: 0.5
+			  }, {
+				name: 'name',
+				weight: 0.4
+			  }, {
+				name: 'longname',
+				weight: 0.2
+			  }]
+		};
+ 
+	var fuse = new Fuse(airports, options);
+	$("#departure").keyup(function(){
+		results = _.take(fuse.search($(this).val()), 7);
+		var airportSearchCode = $(this).val();
+		//console.log(results);
+		var li ='';var suggest=0;var rv = true;
+		results.map(function(r, i) {
+			/*if((r.code.toLowerCase()==airportSearchCode.toLowerCase())){
+				$("#departure").addClass('valid');
+				$("#departure").val(r.name+' ('+r.code+')');
+				$("#departureUl").hide();
+				$("#departuredynamicUl").html('');
+				$("#arrival").focus(); 
+				return rv = false;
+			}
+			else
+			{*/
+				
+				if(suggest=='0'){
+					li+= '<div class="eac-category">SUGGESTION</div>';
+					suggest++;
+					
+				}
+				//li+= '<li data-value="'+r.city+' ('+r.iata+')"><div class="eac-item">'+r.city+', '+r.country+'<p class="font12 greyText appendBottom3">'+r.name+'</p><span>'+r.iata+'</span></div></li>';
+				li+= '<li data-value="'+r.name+' ('+r.code+')"><div class="eac-item"><p style="width:84%;margin:0px;">'+r.name+', '+r.country+'</p><p class="font12 greyText appendBottom3">'+r.longname+'</p><span>'+r.code+'</span></div></li>';
+			//}
+			
+		},airportSearchCode);
+		if(rv){
+			$("#departureUl").hide();
+			$("#departuredynamicUl").html(li);
+			$("#departuredynamicUl").show();
+		}
+	});
+	
+	$("#arrival").keyup(function(){
+		results = _.take(fuse.search($(this).val()), 7);
+		var airportSearchArrivalCode = $(this).val();
+		//console.log(results);
+		var li ='';var suggest=0;var rv = true;
+		results.map(function(r, i) {
+			/*if((r.code.toLowerCase()==airportSearchArrivalCode.toLowerCase())){
+				$("#arrival").addClass('valid');
+				$("#arrival").val(r.name+' ('+r.code+')');
+				$("#arrivalUl").hide();
+				$("#arrivaldynamicUl").html('');
+				return rv = false;
+			}
+			else
+			{*/
+				
+				if(suggest=='0'){ 
+					li+= '<div class="eac-category">SUGGESTION</div>';
+					suggest++;
+					
+				}
+				li+= '<li data-value="'+r.name+' ('+r.code+')"><div class="eac-item"><p style="width:84%;margin:0px;">'+r.name+', '+r.country+'</p><p class="font12 greyText appendBottom3">'+r.longname+'</p><span>'+r.code+'</span></div></li>';
+			//}
+		},airportSearchArrivalCode);
+		if(rv){
+			$("#arrivalUl").hide();
+			$("#arrivaldynamicUl").html(li);
+			$("#arrivaldynamicUl").show();
+		}
+	});
+	
+	
+</script>
+
+<script src="dist/js/dealStep.js"></script>
+<script src="dist/js/multiStep.js"></script>
+<script src="dist/js/groupStep.js"></script>
+<script src="dist/js/cheapStep.js"></script>
+<script src="dist/js/farefixStep.js"></script>				<!-- ============================================================== -->
+                <!-- End PAge Content -->
+                <!-- ============================================================== -->
+                <!-- ============================================================== -->
+                <!-- Right sidebar -->
+                <!-- ============================================================== -->
+                <!-- .right-sidebar -->
+                <div class="right-sidebar wizard-content">
+    <div class="slimscrollright">
+        <div class="rpanel-title"> Add Instant Funds <span><i class="ti-close right-side-toggle"></i></span> </div>
+        <div class="r-panel-body">
+
+            <div class="card border-dark">
+
+				<div class="card-header bg-dark"><h4 class="m-b-0 text-white">Add Funds Online</h4></div>
+				<iframe id="paymentIframe" src="" width="auto" style="display:none;height:500px;"></iframe>
+				<div class="card-body" id="fundDiv">
+					<form id="addFundsForm" name="addFundsForm" method="POST" action="#">
+						<div class="row">
+							<div class="pt-0 pb-2">
+								<h6 class="font-weight-bold">Payment Method</h6>
+								<div class="custom-control custom-radio custom-control-inline">
+									<input type="radio" class="custom-control-input" id="allCUW" name="paymentMethod" value="wallet" checked>
+									<label class="custom-control-label" for="allCUW">All Cards/ UPI / Wallets</label>
+								</div>
+								<div class="custom-control custom-radio custom-control-inline">
+									<input type="radio" class="custom-control-input" id="netBank" name="paymentMethod" value="netbanking">
+									<label class="custom-control-label" for="netBank">Net Banking</label>
+								</div>
+								
+								<hr>
+							</div>
+							<h6 class="font-weight-bold">Select Gateway</h6>
+							<div class="col-md-12">
+								<div class="paymentWrap">
+									<div class="btn-group paymentBtnGroup btn-group-justified" data-toggle="buttons">
+										<label class="btn paymentMethod active" id="payUMethod">
+											<div class="method payu"></div>
+											<input id="payU" type="radio" name="gateway" value="payU">
+										</label>
+										<label class="btn paymentMethod">
+											<div class="method insta"></div>
+											<input id="instmojo" type="radio" name="gateway" value="instmojo" checked>
+										</label>
+										
+									</div>
+								</div>
+							</div>
+							<h6 class="font-weight-bold">Enter Amount</h6>
+							<div class="col-md-12">
+								<div class="form-group">
+									<input type="text" class="form-control" id="addfundamount" name="addfundamount" pattern="[0-9\.,]+" onblur="amountTotal()" onkeyup="word1.innerHTML=convertNumberToWords(this.value)" required> <span id="word1" style="font-size:11px;"></span>
+									<input type="hidden" id="totalrightSideAmount" name="totalrightSideAmount" />
+									<input type="hidden" id="totalrightSideTransAmount" name="totalrightSideTransAmount" />
+									<input type="hidden" id="gatewayType" name="gatewayType" value="payU" />
+								</div>
+								<table class="table table-bordered">
+                                        <thead>
+										<tr id="cardTr">
+											<th>Transaction Charges</th>
+											<!--<th id="dnitcharge">Card Charges</th>-->
+											<th>Payable Amount</th>
+										  
+										</tr>
+										<tr id="netTr" style="display:none;">
+											<th>Transaction Charges</th>
+											<!--<th id="dnitcharge">NetBanking Charges</th>-->
+											<th>Payable Amount</th>
+										  
+										</tr>
+									</thead>
+                                        <tbody>
+                                            <tr>
+                                                <td> <i class="fas fa-percentage"></i> <span id="transSecurely"></span></td>
+                                                <!--<td>
+                                                   % <i class="fas fa-percentage"></i> <span id="transSecurely"></span>
+                                                </td>-->
+                                               
+                                                <td><i class="fas fa-percentage"></i> <span class="btn-label"> <i class="fas fa-rupee-sign"></i></span> <span id="paySecurely"></span></td>
+                                                
+                                            </tr>
+
+                                        </tbody>
+                                    </table>
+							</div>
+							
+							<div class="col-md-12">
+								<button class="btn btn-block btn-md btn-info" type="submit"><span class="btn-label">Confirm Payment</span></button>
+
+								<br>
+								<p class="text-center">                      
+									<i class="fab fa-cc-visa fa-2x"></i>
+									<i class="fab fa-cc-mastercard fa-2x"></i>
+									<i class="fab fa-cc-amex fa-2x"></i>
+									<i class="fab fa-cc-discover fa-2x"></i>
+									<i class="fab fa-cc-paypal fa-2x"></i>
+								</p>
+	   
+							</div>
+						</div>
+					
+					</form>
+				</div>
+	
+			</div>
+
+		</div>
+    </div>
+</div>
+<script type="text/javascript"> 
+	var instamojoCharges = 1.9;
+	var instamojoNetbanking = 0;
+	var payUCharges = 1.9;
+	var payUNetbanking = 0;
+	
+	$("#addfundamount").on("keypress keyup blur",function (event) {
+            //this.value = this.value.replace(/[^0-9\.]/g,'');
+		/*$(this).val($(this).val().replace(/[^0-9\.]/g,''));
+		if ((event.which != 46 || $(this).val().indexOf('.') != -1) && (event.which < 48 || event.which > 57)) {
+			event.preventDefault();
+		}*/
+		// skip for arrow keys
+		  if(event.which >= 37 && event.which <= 40) return;
+
+		  // format number
+		  $(this).val(function(index, value) {
+			return value
+			.replace(/\D/g, "")
+			.replace(/\B(?=(\d{3})+(?!\d))/g, ",")
+			;
+		  });
+    });
+	function amountTotal() {
+		var rightSideamount = $("#addfundamount"). val();
+		rightSideamount =rightSideamount.replace(",", "");
+		var paymentMethod = $("input[name='paymentMethod']:checked"). val();
+		var gateway = $("input[name='gateway']:checked"). val();
+		if(paymentMethod=='wallet'){
+			if(gateway=='instmojo'){
+				var charge = Math.abs(parseFloat((rightSideamount * instamojoCharges)/100)).toFixed(2);
+				var totalCharge = Math.abs(parseFloat(charge)+parseFloat(rightSideamount)).toFixed(2);
+				//rightNet_charge = rightNet_charge.toFixed(2);
+				$("#paySecurely").html(totalCharge);
+				$("#transSecurely").html(charge);
+				$("#totalrightSideAmount").val(totalCharge);
+				$("#totalrightSideTransAmount").val(charge);
+			}
+			else
+			{
+				var charge = Math.abs(parseFloat((rightSideamount * payUCharges)/100)).toFixed(2);
+				var totalCharge = Math.abs(parseFloat(charge)+parseFloat(rightSideamount)).toFixed(2);
+				//var rightNet_charge = Math.abs(parseFloat(rightSideamount * (payUCharges)));
+				//rightNet_charge = rightNet_charge.toFixed(2) ;
+				$("#paySecurely").html(totalCharge);
+				$("#transSecurely").html(charge);
+				$("#totalrightSideAmount").val(totalCharge);
+				$("#totalrightSideTransAmount").val(charge);
+			}
+		}
+		else
+		{
+			if(gateway=='instmojo'){
+				var totalCharge = parseFloat(parseFloat(rightSideamount)+parseFloat(instamojoNetbanking)).toFixed(2);
+				
+				$("#paySecurely").html(totalCharge);
+				$("#transSecurely").html(instamojoNetbanking);
+				$("#totalrightSideAmount").val(totalCharge);
+				$("#totalrightSideTransAmount").val(instamojoNetbanking);
+			}
+			else
+			{
+				var totalCharge = Math.abs(parseFloat(rightSideamount)+parseFloat(payUNetbanking)).toFixed(2);
+				
+				$("#paySecurely").html(totalCharge);
+				$("#transSecurely").html(payUNetbanking);
+				$("#totalrightSideAmount").val(totalCharge);
+				$("#totalrightSideTransAmount").val(payUNetbanking);
+			}
+		}
+	}
+	
+	$("input[name='paymentMethod']").on( "change", function(e) {
+		var paymentMethod = $("input[name='paymentMethod']:checked"). val();
+		var gateway = $("input[name='gateway']:checked"). val();
+		if(paymentMethod=='netbanking'){
+			$("#payUMethod").show();
+			
+			$("#netTr").show();
+			$("#cardTr").hide();
+			//$("#dnitcharge").html('NetBanking Charges');
+			$("#paySecurely").html('');
+			$("#transSecurely").html('');
+			$("#addfundamount"). val('');
+		}
+		else
+		{
+			
+			$("#instmojo").prop("checked", true);
+			//$("#instmojo").parents('label').addClass('active');
+			
+			$("#cardTr").show();
+			$("#netTr").hide();
+			//$("#dnitcharge").html('Card Charges');
+			$("#paySecurely").html('');
+			$("#transSecurely").html('');
+			$("#addfundamount"). val('');
+		}
+		
+		
+	});
+	  
+	$('.method').on( "click", function(e) {
+		var rightSideamount = $("#addfundamount"). val();
+		if(rightSideamount==''){
+			rightSideamount = '0.00';
+		}
+			
+		var paymentMethod = $("input[name='paymentMethod']:checked"). val();
+		if($(this).hasClass('insta')){
+			var gateway = 'instmojo';
+			$("#instmojo").prop("checked", true);
+			$("#gatewayType").val('instmojo');
+		}
+		else
+		{
+			var gateway = 'payU';
+			$("#payU").prop("checked", true);
+			$("#gatewayType").val('payU');
+		}
+		$("#paySecurely").html('');
+		$("#transSecurely").html('');
+		$("#addfundamount"). val('');
+		
+		
+	});
+	
+	$('#addFundsForm').on('submit', function(e){
+		if($("#gatewayType").val()=='instmojo'){
+			var formfundData  = $('#addFundsForm').serializeArray();
+			$.ajax({
+				type        : 'POST', // define the type of HTTP verb we want to use (POST for our form)
+				url         : 'addfunds.php', // the url where we want to POST
+				data        : formfundData, // our data object
+				//dataType    : 'json', // what type of data do we expect back from the server
+				beforeSend : function() {
+					$("#fundDiv").html('<div class="text-center p-40"><strong>Please Wait Loading...</strong><br><div class="spinner-border ml-auto" role="status" aria-hidden="true"></div></div>');
+				},
+				success:function(response){
+					$("#fundDiv").html('');
+					$("#paymentIframe").attr("src", response);
+					$("#paymentIframe").show();
+				}
+			});
+		}
+		
+	});
+</script>
+                <!-- ============================================================== -->
+                <!-- End Right sidebar -->
+                <!-- ============================================================== -->
+            </div>
+            <!-- ============================================================== -->
+            <!-- End Container fluid  -->
+            <!-- ============================================================== -->
+        </div>
+        <!-- ============================================================== -->
+        <!-- End Page wrapper  -->
+        <!-- ============================================================== -->
+        <!-- ============================================================== -->
+        <!-- footer -->
+        <!-- ============================================================== -->
+        <footer class="footer">
+            
+            © 2022 FareFix Solutions Pvt. Ltd. All Rights Reserved
+        </footer>
+        <!-- ============================================================== -->
+        <!-- End footer -->
+        <!--- ============================================================== -->
+    </div>
+		
+    <!-- ============================================================== -->
+    <!-- End Wrapper -->
+    <!-- ============================================================== -->
+    <!-- ============================================================== -->
+    <!-- All Jquery -->
+    <!-- ============================================================== -->
+	<script src="assets/node_modules/sweetalert2/dist/sweetalert2.all.min.js"></script>
+    <script src="assets/node_modules/jquery/jquery-3.2.1.min.js"></script>
+	    <!-- Bootstrap tether Core JavaScript -->
+    <script src="assets/node_modules/popper/popper.min.js"></script>
+    <script src="assets/node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+    <!-- slimscrollbar scrollbar JavaScript -->
+    <script src="dist/js/perfect-scrollbar.jquery.min.js"></script>
+    <!--Wave Effects -->
+    <script src="dist/js/waves.js"></script>
+    <!--Menu sidebar -->
+    <script src="dist/js/sidebarmenu.js"></script>
+    <!--stickey kit -->
+    <script src="assets/node_modules/sticky-kit-master/dist/sticky-kit.min.js"></script>
+    <script src="assets/node_modules/sparkline/jquery.sparkline.min.js"></script>
+    <!--Custom JavaScript -->
+    <script src="dist/js/custom.min.js"></script>
+    <!-- icheck -->
+    <script src="assets/node_modules/icheck/icheck.min.js"></script>
+    <script src="assets/node_modules/icheck/icheck.init.js"></script>
+    <script src="assets/node_modules/switchery/dist/switchery.min.js"></script>
+    <script src="assets/node_modules/select2/dist/js/select2.full.min.js" type="text/javascript"></script>
+    <script src="assets/node_modules/bootstrap-select/bootstrap-select.min.js" type="text/javascript"></script>
+    <script src="assets/node_modules/bootstrap-tagsinput/dist/bootstrap-tagsinput.min.js"></script>
+    <script src="assets/node_modules/bootstrap-touchspin/dist/jquery.bootstrap-touchspin.js" type="text/javascript"></script>
+    <script src="assets/node_modules/dff/dff.js" type="text/javascript"></script>
+    <script type="text/javascript" src="assets/node_modules/multiselect/js/jquery.multi-select.js"></script>
+    <script src="assets/node_modules/moment/moment.js"></script>
+    <script src="assets/node_modules/bootstrap-material-datetimepicker/js/bootstrap-material-datetimepicker.js"></script>
+       <script src="assets/node_modules/ion-rangeslider/js/ion-rangeSlider/ion.rangeSlider.min.js"></script>
+
+       <!-- Magnific popup JavaScript -->
+    <script src="assets/node_modules/Magnific-Popup-master/dist/jquery.magnific-popup.min.js"></script>
+    <script src="assets/node_modules/Magnific-Popup-master/dist/jquery.magnific-popup-init.js"></script>
+
+   <script type="text/javascript" src="dist/js/pages/jquery_validation/jquery.validate.min.js"></script>
+<script type="text/javascript" src="dist/js/pages/jquery_validation/additional-methods.min.js"></script>
+
+    <script src="dist/js/pages/jquery.PrintArea.js" type="text/JavaScript"></script>
+    <script>
+    $(document).ready(function() {
+        $("#print").click(function() {
+            var mode = 'iframe'; //popup
+            var close = mode == "popup";
+            var options = {
+                mode: mode,
+                popClose: close
+            };
+            $("div.printableArea").printArea(options);
+        });
+    });
+    </script>
+<script type="text/javascript" src="dist/js/stickable.js"></script>
+
+<!-- Seat Picker JS -->
+
+<script type="text/javascript" src="dist/js/jquery.seat-charts.js"></script>
+
+<!-- bootstrap-touchspin -->
+
+<script src="assets/node_modules/bootstrap-touchspin/dist/jquery.bootstrap-touchspin.js" type="text/javascript"></script>
+<link href="assets/eac/easy-autocomplete.themes.min.css" rel="stylesheet">
+    <link href="assets/eac/easy-autocomplete.min.css" rel="stylesheet">
+
+ <!-- date-paginator -->
+    <script src="assets/node_modules/date-paginator/moment.min.js"></script>
+    <script src="assets/node_modules/bootstrap-datepicker/bootstrap-datepicker.min.js"></script>
+    <script src="assets/node_modules/date-paginator/bootstrap-datepaginator.min.js"></script>
+	<script src="assets/node_modules/dropify/dist/js/dropify.min.js"></script>
+    <script type="text/javascript">
+	
+     
+	
+    var datepaginator = function() {
+        return {
+            init: function() {
+               
+                    $("#paginator3").datepaginator({
+                        size: "large"
+                    })
+                  
+            }
+        }
+    }();
+    jQuery(document).ready(function() {
+        datepaginator.init()
+    });
+    </script>
+
+<script type="text/javascript">
+   jQuery( document ).ready( function( $ ) {
+      $( '#sticky' ).stickable();
+   });
+
+   $('[data-toggle="tooltip"]').tooltip({
+    animated: 'fade',
+    placement: 'top',
+    html: true
+});
+</script>
+
+<script type="text/javascript">
+$(document).ready(function(){
+    $("#Jpop").popover({
+        title: '<i class="fa fa-info-circle"></i> Support Contact Info',
+        content: '<strong>Sales:</strong> +91-928 900 8000 <br><strong>Support:</strong> +91-928 900 8000 <br><strong>Accounts:</strong> +91-928 900 8000',
+        container: 'body',
+        placement: 'bottom',
+        html: true
+    }); 
+});
+</script>
+
+<script type="text/javascript">
+	function convertNumberToWords(amount) {
+    var words = new Array();
+    words[0] = '';
+    words[1] = 'One';
+    words[2] = 'Two';
+    words[3] = 'Three';
+    words[4] = 'Four';
+    words[5] = 'Five';
+    words[6] = 'Six';
+    words[7] = 'Seven';
+    words[8] = 'Eight';
+    words[9] = 'Nine';
+    words[10] = 'Ten';
+    words[11] = 'Eleven';
+    words[12] = 'Twelve';
+    words[13] = 'Thirteen';
+    words[14] = 'Fourteen';
+    words[15] = 'Fifteen';
+    words[16] = 'Sixteen';
+    words[17] = 'Seventeen';
+    words[18] = 'Eighteen';
+    words[19] = 'Nineteen';
+    words[20] = 'Twenty';
+    words[30] = 'Thirty';
+    words[40] = 'Forty';
+    words[50] = 'Fifty';
+    words[60] = 'Sixty';
+    words[70] = 'Seventy';
+    words[80] = 'Eighty';
+    words[90] = 'Ninety';
+    amount = amount.toString();
+    var atemp = amount.split(".");
+    var number = atemp[0].split(",").join("");
+    var n_length = number.length;
+    var words_string = "";
+    if (n_length <= 9) {
+        var n_array = new Array(0, 0, 0, 0, 0, 0, 0, 0, 0);
+        var received_n_array = new Array();
+        for (var i = 0; i < n_length; i++) {
+            received_n_array[i] = number.substr(i, 1);
+        }
+        for (var i = 9 - n_length, j = 0; i < 9; i++, j++) {
+            n_array[i] = received_n_array[j];
+        }
+        for (var i = 0, j = 1; i < 9; i++, j++) {
+            if (i == 0 || i == 2 || i == 4 || i == 7) {
+                if (n_array[i] == 1) {
+                    n_array[j] = 10 + parseInt(n_array[j]);
+                    n_array[i] = 0;
+                }
+            }
+        }
+        value = "";
+        for (var i = 0; i < 9; i++) {
+            if (i == 0 || i == 2 || i == 4 || i == 7) {
+                value = n_array[i] * 10;
+            } else {
+                value = n_array[i];
+            }
+            if (value != 0) {
+                words_string += words[value] + " ";
+            }
+            if ((i == 1 && value != 0) || (i == 0 && value != 0 && n_array[i + 1] == 0)) {
+                words_string += "Crores ";
+            }
+            if ((i == 3 && value != 0) || (i == 2 && value != 0 && n_array[i + 1] == 0)) {
+                words_string += "Lakhs ";
+            }
+            if ((i == 5 && value != 0) || (i == 4 && value != 0 && n_array[i + 1] == 0)) {
+                words_string += "Thousand ";
+            }
+            if (i == 6 && value != 0 && (n_array[i + 1] != 0 && n_array[i + 2] != 0)) {
+                words_string += "Hundred and ";
+            } else if (i == 6 && value != 0) {
+                words_string += "Hundred ";
+            }
+        }
+        words_string = words_string.split("  ").join(" ");
+    }
+		return '('+words_string+')';
+	} 
+	//logout alert 
+	$("#logout").click(function(){
+		Swal.fire({
+			title: 'Logout',
+			text: "Are You Sure You Want To Log Out?",
+			type: 'warning',
+			showCancelButton: false,
+			confirmButtonColor: '#3085d6',
+			cancelButtonColor: '#d33',
+			confirmButtonText: 'Done'
+		}).then((result) => {
+			if (result.value) {
+				 window.location.href = 'index.php?pg=logout'
+			}
+		})
+		
+
+    });
+	//end logout
+	$('.img-popups').magnificPopup({
+		  delegate: 'a',
+		  type: 'image',
+		  removalDelay: 500, //delay removal by X to allow out-animation
+		  callbacks: {
+		    beforeOpen: function() {
+		      // just a hack that adds mfp-anim class to markup 
+		       this.st.image.markup = this.st.image.markup.replace('mfp-figure', 'mfp-figure mfp-with-anim');
+		       this.st.mainClass = this.st.el.attr('data-effect');
+		    }
+		  },
+		  closeOnContentClick: true,
+		  midClick: true // allow opening popup on middle mouse click. Always set it to true if you don't provide alternative source.
+		});
+</script>
+	
+
+
+    <script>
+    // MAterial Date picker    
+    //$('.mdate').bootstrapMaterialDatePicker({ weekStart: 0, time: false });
+	//dashbord Validation
+	//child date of birth
+	  var m = moment();
+	
+	
+	$('.adultMdate').bootstrapMaterialDatePicker({
+			weekStart: 0, time: false,maxDate : moment().add({days:-1, years:-12}),minDate: moment().add(-95, 'years'), format: 'DD-MM-YYYY',switchOnClick: true 
+	});
+	$('.childMdate').bootstrapMaterialDatePicker({
+			weekStart: 0, time: false,maxDate : moment().add({days:-1, years:-2}),minDate: moment().add(-12, 'years'), format: 'DD-MM-YYYY',switchOnClick: true 
+	});
+	//infant date of birth
+	$('.infantMdate').bootstrapMaterialDatePicker({
+			weekStart: 0, time: false,maxDate : moment().add({days:-1}),minDate: moment().add({days:1, years:-2}),
+			switchOnClick: true,format: 'DD-MM-YYYY'
+	});
+	
+	
+	
+	//passport expire date
+	$('.passportexpiry').bootstrapMaterialDatePicker({
+		weekStart: 0, time: false,minDate : new Date(),format: 'DD-MM-YYYY',
+		switchOnClick: true 
+	});
+	$('.passportissue').bootstrapMaterialDatePicker({
+		weekStart: 0, time: false,maxDate : new Date(),format: 'DD-MM-YYYY',
+		switchOnClick: true 
+	});
+	
+	$('#returndate').bootstrapMaterialDatePicker({
+		weekStart: 0, time: false,minDate : new Date(),format: 'DD-MM-YYYY',
+		switchOnClick: true 
+	});
+
+	$('#leavedate').bootstrapMaterialDatePicker({
+		weekStart: 0, time: false,switchOnClick: true,minDate : new Date(),format: 'DD-MM-YYYY',
+	}).on('change', function(e, date) {
+		$('#returndate').val('');
+		$('#returndate').bootstrapMaterialDatePicker('setMinDate', date);
+	});
+	$('.selectpicker').selectpicker();
+	
+	//Deal fare date
+	$('#returndateDeal').bootstrapMaterialDatePicker({
+		weekStart: 0, time: false,minDate : new Date(),format: 'DD-MM-YYYY',
+		switchOnClick: true 
+	});
+
+	$('#leavedateDeal').bootstrapMaterialDatePicker({
+		weekStart: 0, time: false,switchOnClick: true,minDate : new Date(),format: 'DD-MM-YYYY',
+	}).on('change', function(e, date) {
+		$('#returndateDeal').val('');
+		$('#returndateDeal').bootstrapMaterialDatePicker('setMinDate', date);
+	});
+	
+	$('#leaveSpecialdate').bootstrapMaterialDatePicker({
+		weekStart: 0, time: false,switchOnClick: true,minDate : new Date(),format: 'DD-MM-YYYY',
+	});
+	//var user_busy_days      = ['2020-12-23','2020-12-26','2021-01-10'];
+	
+		/*$('#leaveSpecialdate').datepicker({
+			inline: true,
+			format: 'dd-mm-yyyy',
+			sideBySide: true,
+			todayHighlight: true,
+			autoclose: true,
+			beforeShowDay: function (date) {
+				for (var i = 0; i < user_busy_days.length; i++) {
+					if (moment(date).unix()==moment(user_busy_days[i],'YYYY-MM-DD').unix()){
+							return true;
+					}
+				}
+				return false;
+			}
+		});*/
+		
+	
+	//for hotel
+	
+	$('#check_in').bootstrapMaterialDatePicker({
+		weekStart: 0, time: false,switchOnClick: true,minDate : new Date(),format: 'DD-MM-YYYY',
+	}).on('change', function(e, date) {
+		//var a = moment(date,"DD/MM/YYYY").add(1, 'days');
+		var a  = moment($("#check_in").val(),"DD/MM/YYYY").add(1, 'days').format('DD-MM-YYYY');
+		$('#check_out').val(a);
+		$("#days").val(1);
+		$("#checkouthotelnighttext").text("(1 Nights)");
+		$('#check_out').bootstrapMaterialDatePicker('setMinDate', date);
+	});
+	
+	$('#check_out').bootstrapMaterialDatePicker({
+		weekStart: 0, time: false,minDate : new Date(),format: 'DD-MM-YYYY',
+		switchOnClick: true 
+	}).on('change', function(e, date) {
+		var a = moment($("#check_in").val(),"DD/MM/YYYY");
+		var b = moment($("#check_out").val(),"DD/MM/YYYY");
+		var c=b.diff(a, 'days');
+		if(c<1)
+		{
+			$("#days").val("Invalid Dates");
+			$("#hotel_submit").prop("disabled",true);
+
+		}
+		else
+		{
+			$("#days").val(b.diff(a, 'days'));
+			$("#checkouthotelnighttext").text("("+b.diff(a, 'days')+" Nights)");
+			$("#hotel_submit").prop("disabled",false);
+		}
+	});
+	
+	$('#leavedateMulti').bootstrapMaterialDatePicker({
+		weekStart: 0, time: false,switchOnClick: true,minDate : new Date(),format: 'DD-MM-YYYY',
+	})
+	
+	$('#leavedateGroup').bootstrapMaterialDatePicker({
+		weekStart: 0, time: false,switchOnClick: true,minDate : new Date(),format: 'DD-MM-YYYY',
+	})
+	
+	$('#leavedateCheap').bootstrapMaterialDatePicker({
+		weekStart: 0, time: false,switchOnClick: true,minDate : new Date(),format: 'DD-MM-YYYY',
+	})
+	
+	$('#depositAmountDate').bootstrapMaterialDatePicker({
+		weekStart: 0, time: false,switchOnClick: true,maxDate : new Date(),format: 'DD-MM-YYYY',
+	})
+	
+	$(document).mouseup(function(e){
+		var rightSideToggle = $(".right-sidebar");
+		if(rightSideToggle.has(e.target).length === 0){
+			$(".right-sidebar").slideUp(50);
+			$(".right-sidebar").removeClass("shw-rside");
+		}
+	});	
+	$(document).ready(function() {
+		$('#returndate').bootstrapMaterialDatePicker('setMinDate', $('#leavedate').val());
+		$('.dtp-btn-ok').hide();
+		$('.dtp-btn-cancel').hide();
+		//$("#departure").easyAutocomplete(options1);
+		//$("#arrival").easyAutocomplete(options);
+		$("#departure").on("click", function() {
+			$(this).val("")
+		});
+
+		$("#arrival").on("click", function() {
+			$(this).val("")
+		});
+		$('.flight-class').on('change', function() {
+			$("#classType").val($(this).attr('data-val'));
+			$('#flightTravellersClass').val($('#passengers').val()+" Pax - "+$(this).attr('data-val')); 
+			 
+		});
+		$('.flight-classMulti').on('change', function() {
+			$("#classTypeMulti").val($(this).attr('data-val'));
+			$('#flightTravellersClassMulti').val($('#passengersMulti').val()+" Pax - "+$(this).attr('data-val')); 
+			 
+		});
+		$('.flight-classDeal').on('change', function() {
+			$("#classTypeDeal").val($(this).attr('data-val'));
+			$('#flightTravellersClassDeal').val($('#passengersDeal').val()+" Pax - "+$(this).attr('data-val')); 
+			 
+		});
+		
+		$('.flight-classCheap').on('change', function() {
+			$("#classTypeCheap").val($(this).attr('data-val'));
+			$('#flightTravellersClassCheap').val($('#passengersCheap').val()+" Pax - "+$(this).attr('data-val')); 
+			 
+		});
+		
+		$('.flight-classfareFix').on('change', function() {
+			$("#classTypefareFix").val($(this).attr('data-val'));
+			$('#flightTravellersClassfareFix').val($('#passengersfareFix').val()+" Pax - "+$(this).attr('data-val')); 
+			 
+		});
+	});
+	
+	$(document).on('click', '.number-spinner button', function () {
+		var btn = $(this),
+		input = btn.closest('.number-spinner').find('input'),
+		total = $('#passengers').val(),
+		//total = $('#flightTravellersClass').attr('data-value'),
+		oldValue = input.val().trim();
+		if (btn.attr('data-dir') == 'up') {
+		  if(oldValue < input.attr('max')){
+			oldValue++;
+			total++;
+		  }
+		} else {
+		  if (oldValue > input.attr('min')) {
+			oldValue--;
+			total--;
+		  }
+		}
+		
+		$('#passengers').val(total);
+		//$('#flightTravellersClass').data('value',total);
+		$('#flightTravellersClass').val(total+" Pax - "+$("#classType").val());
+		input.val(oldValue);
+	});
+	//end dashboard
+	$(document).on('click', '.number-spinnerMulti button', function () {
+		var btn = $(this),
+		input = btn.closest('.number-spinnerMulti').find('input'),
+		total = $('#passengersMulti').val(),
+		//total = $('#flightTravellersClass').attr('data-value'),
+		oldValue = input.val().trim();
+		if (btn.attr('data-dir') == 'up') {
+		  if(oldValue < input.attr('max')){
+			oldValue++;
+			total++;
+		  }
+		} else {
+		  if (oldValue > input.attr('min')) {
+			oldValue--;
+			total--;
+		  }
+		}
+		
+		$('#passengersMulti').val(total);
+		//$('#flightTravellersClass').data('value',total);
+		$('#flightTravellersClassMulti').val(total+" Pax - "+$("#classTypeMulti").val());
+		console.log(input);
+		input.val(oldValue);
+	});
+	
+	$(document).on('click', '.number-spinnerDeal button', function () {
+		var btn = $(this),
+		input = btn.closest('.number-spinnerDeal').find('input'),
+		total = $('#passengersDeal').val(),
+		//total = $('#flightTravellersClass').attr('data-value'),
+		oldValue = input.val().trim();
+		if (btn.attr('data-dir') == 'up') {
+		  if(oldValue < input.attr('max')){
+			oldValue++;
+			total++;
+		  }
+		} else {
+		  if (oldValue > input.attr('min')) {
+			oldValue--;
+			total--;
+		  }
+		}
+		
+		$('#passengersDeal').val(total);
+		//$('#flightTravellersClass').data('value',total);
+		$('#flightTravellersClassDeal').val(total+" Pax - "+$("#classTypeDeal").val());
+		console.log(input);
+		input.val(oldValue);
+	});
+	
+	$(document).on('click', '.number-spinnerCheap button', function () {
+		var btn = $(this),
+		input = btn.closest('.number-spinnerCheap').find('input'),
+		total = $('#passengersCheap').val(),
+		//total = $('#flightTravellersClass').attr('data-value'),
+		oldValue = input.val().trim();
+		if (btn.attr('data-dir') == 'up') {
+		  if(oldValue < input.attr('max')){
+			oldValue++;
+			total++;
+		  }
+		} else {
+		  if (oldValue > input.attr('min')) {
+			oldValue--;
+			total--;
+		  }
+		}
+		
+		$('#passengersCheap').val(total);
+		//$('#flightTravellersClass').data('value',total);
+		$('#flightTravellersClassCheap').val(total+" Pax - "+$("#classTypeCheap").val());
+		console.log(input);
+		input.val(oldValue);
+	});
+	
+	$(document).on('click', '.number-spinnerfareFix button', function () {
+		var btn = $(this),
+		input = btn.closest('.number-spinnerfareFix').find('input'),
+		total = $('#passengersfareFix').val(),
+		//total = $('#flightTravellersClass').attr('data-value'),
+		oldValue = input.val().trim();
+		if (btn.attr('data-dir') == 'up') {
+		  if(oldValue < input.attr('max')){
+			oldValue++;
+			total++;
+		  }
+		} else {
+		  if (oldValue > input.attr('min')) {
+			oldValue--;
+			total--;
+		  }
+		}
+		
+		$('#passengersfareFix').val(total);
+		//$('#flightTravellersClass').data('value',total);
+		$('#flightTravellersClassfareFix').val(total+" Pax - "+$("#classTypefareFix").val());
+		console.log(input);
+		input.val(oldValue);
+	});
+    
+
+    //Bootstrap-TouchSpin
+	$("input[id='tch3_22room']").TouchSpin({
+        min: 1,
+        max: 6,
+    }).on('touchspin.on.startspin', function () {
+		var roomCount = $(this).val();
+		$("#roomCountSpan").html(roomCount);
+		//$("#passCountSpan").html(roomCount);
+		
+		var roomHtml='';
+		
+		for(i=1;i<=roomCount;i++){
+			
+			roomHtml+='<div class="row"><div class="col-md-3"><p class="card-title m-t-30">Room '+i+'</p></div><div class="col-md-2"><div class="form-group"><label class="control-label small">Adults</label><input class="form-control adultcls" id="tch3_22adult" name="adultroom['+i+'][]" type="text" value="2" data-bts-button-down-class="btn btn-info btn-outline" data-bts-button-up-class="btn btn-info btn-outline"> </div></div><div class="col-md-2"><div class="form-group"><label class="control-label small">Children</label> <input class="form-control childcls" id="tch3_22children" name="childroom['+i+'][]" type="text" value="0" data-room="'+i+'" data-bts-button-down-class="btn btn-info btn-outline" data-bts-button-up-class="btn btn-info btn-outline"> </div></div><div class="col-md-4" id="childAgeDiv'+i+'" style="display: flex;"></div></div>';
+		}
+		/*$(".adultcls").each(function(){
+			adultCnt+=Number($(this).val());
+		});
+		alert(adultCnt);*/
+		$("#roomDiv").html(roomHtml);
+		var chldCnt = 0;var adultCnt = 0;
+		$(".childcls").each(function(){
+			chldCnt+=Number($(this).val());
+		});
+		$(".adultcls").each(function(){
+			adultCnt+=Number($(this).val());
+		});
+		console.log("adul="+adultCnt);console.log(chldCnt);
+		totalPassenger = chldCnt+adultCnt;
+		$("#passCountSpan").html(totalPassenger);
+			$("input[id='tch3_22adult']").TouchSpin({
+				min: 1,
+				max: 6,
+			}).on('touchspin.on.startspin', function () {
+				var chldCnt = 0;var adultCnt = 0;
+				$(".childcls").each(function(){
+					chldCnt+=Number($(this).val());
+				});
+				$(".adultcls").each(function(){
+					adultCnt+=Number($(this).val());
+				});
+				totalPassenger = chldCnt+adultCnt;
+				$("#passCountSpan").html(totalPassenger);
+			});	
+			$("input[id='tch3_22children']").TouchSpin({
+				min: 0,
+				max: 2,
+			}).on('touchspin.on.startspin', function () {
+				var chldCnt = 0;var adultCnt = 0;
+				$(".childcls").each(function(){
+					chldCnt+=Number($(this).val());
+				});
+				$(".adultcls").each(function(){
+					adultCnt+=Number($(this).val());
+				});
+				totalPassenger = chldCnt+adultCnt;
+				$("#passCountSpan").html(totalPassenger);
+				var childCount = $(this).val();
+				var childParentRoom = $(this).attr('data-room');
+				var childHtml='';
+				for(j=1;j<=childCount;j++){
+					childHtml+='<div class="col-md-6"><div class="form-group"><label class="control-label small">Age of Child '+j+'</label><select class="form-control custom-select" name="childAge['+childParentRoom+']['+j+'][]"><option>1</option><option>2</option><option>3</option><option>4</option><option>5</option><option>6</option><option>7</option><option>8</option><option>9</option><option>10</option><option>11</option><option>12</option></select></div></div>';
+					
+				}
+				$("#childAgeDiv"+childParentRoom).html(childHtml);
+				
+			});
+				
+	});
+	
+	$("input[id='tch3_22adult']").TouchSpin({
+        min: 1,
+        max: 6,
+    }).on('touchspin.on.startspin', function () {
+		var chldCnt = 0;var adultCnt = 0;
+		$(".childcls").each(function(){
+			chldCnt+=Number($(this).val());
+		});
+		$(".adultcls").each(function(){
+			adultCnt+=Number($(this).val());
+		});
+		totalPassenger = chldCnt+adultCnt;
+		$("#passCountSpan").html(totalPassenger);;
+	});
+	$("input[id='tch3_22children']").TouchSpin({
+        min: 0,
+        max: 2,
+    }).on('touchspin.on.startspin', function () {
+		var chldCnt = 0;var adultCnt = 0;
+		$(".childcls").each(function(){
+			chldCnt+=Number($(this).val());
+		});
+		$(".adultcls").each(function(){
+			adultCnt+=Number($(this).val());
+		});
+		totalPassenger = chldCnt+adultCnt;
+		$("#passCountSpan").html(totalPassenger);
+		
+		var childCount = $(this).val();
+		var childParentRoom = $(this).attr('data-room');
+		var childHtml='';
+		for(j=1;j<=childCount;j++){
+			childHtml+='<div class="col-md-6"><div class="form-group"><label class="control-label small">Age of Child '+j+'</label><select class="form-control custom-select" name="childAge['+childParentRoom+']['+j+'][]"><option>1</option><option>2</option><option>3</option><option>4</option><option>5</option><option>6</option><option>7</option><option>8</option><option>9</option><option>10</option><option>11</option><option>12</option></select></div></div>';
+			
+		}
+		$("#childAgeDiv"+childParentRoom).html(childHtml);
+				
+	});
+	
+    $("input[name='tch3_22']").TouchSpin({
+        min: 0,
+        max: 6,
+    });
+
+    
+
+        /* Hide dropdown when clicking outside */
+    $(document).on('click', function(event) { 
+		if (!$(event.target).closest(".travellers-class").length) {
+			
+			//$(".travellers-dropdown").hide();
+		}
+		if (!$(event.target).closest(".travellers-classMulti").length) {
+			//$(".MultiStepdropdown").hide();
+		}
+		if (!$(event.target).closest(".travellers-classDeal").length) {
+			//$(".MultiStepdropdown").hide();
+		}
+		if (!$(event.target).closest(".travellers-classCheap").length) {
+			//$(".MultiStepdropdown").hide();
+		}
+		if (!$(event.target).closest(".travellers-classfareFix").length) {
+			//$(".MultiStepdropdown").hide();
+		}
+		
+		
+		/* Hide dropdown when clicking on Done Button */
+		$('.submit-done').on('click', function() {
+			$('.travellers-dropdown').fadeOut(function() {
+				$(this).hide();
+			});
+			
+		});
+		$('.submit-doneMulti').on('click', function() {
+			$('.MultiStepdropdown').fadeOut(function() {
+				$(this).hide();
+			});
+			
+		});
+		$('.submit-doneDeal').on('click', function() {
+			$('.DealStepdropdown').fadeOut(function() {
+				$(this).hide();
+			});
+			
+		});
+		$('.submit-doneCheap').on('click', function() {
+			$('.CheapStepdropdown').fadeOut(function() {
+				$(this).hide();
+			});
+			
+		});
+		
+		$('.submit-donefareFix').on('click', function() {
+			$('.fareFixdropdown').fadeOut(function() {
+				$(this).hide();
+			});
+			
+		});
+		
+	});
+	
+
+// $("#priceRange").ionRangeSlider({
+//     type: "double",
+//     grid: true,
+//     min: 0,
+//     max: 1000,
+//     from: 200,
+//     to: 800,
+//     prefix: "₹"
+// });
+
+$("#live").perfectScrollbar();
+
+
+
+
+
+// Filter toggle on result
+
+$('.filter-toggle').on('click', function() {
+  $('i', this).toggleClass('fa-chevron-up fa-chevron-down');
+});
+
+
+// Select radio when click on parent
+
+    $('.flight-item').click(function (e) {
+        //$('.flight').attr('checked', false);
+        $(this).find('.radio-custom').prop('checked', true);
+    });
+
+// popover on hover
+
+	$("[data-toggle=popover]").popover({
+		html: true, 
+		content: function() {
+          return $('#popover-content').html();
+        }
+	});
+	$('html').on('click', function(e) {
+	  if (typeof $(e.target).data('original-title') == 'undefined' &&
+		 !$(e.target).parents().is('.popover.in')) {
+		$('[data-original-title]').popover('hide');
+	  }
+	});
+	
+
+//     $(document).ready(function(){
+//     $('[data-toggle="popover"]').popover({
+//         placement : 'top',
+//         trigger : 'hover'
+//     });
+// });
+
+// $(document).ready(function(){
+//     $('#tglr').popover({
+//       html : true, 
+//       content: function() {
+//         return $('#customdiv').html();
+//       } 
+//   });  
+// });
+
+
+  
+
+
+ $("input[name='tch1']").TouchSpin({
+                min: 0,
+                max: 100,
+                step: 1,
+                boostat: 5,
+                maxboostedstep: 10,
+                postfix: 'INR 1140'
+            });
+
+// Image upload preview for profile page
+
+function readURL(input) {
+    if (input.files && input.files[0]) {
+        var reader = new FileReader();
+        reader.onload = function(e) {
+            $('#imagePreview').css('background-image', 'url('+e.target.result +')');
+            $('#imagePreview').hide();
+            $('#imagePreview').fadeIn(650);
+        }
+        reader.readAsDataURL(input.files[0]);
+    }
+}
+$("#imageUpload").change(function() {
+    readURL(this);
+});
+
+    </script>
+
+<!--     Code to disable CTRL+P on Invoice Page -->
+
+    <script type="text/javascript">
+
+
+        /*$(document).on('keydown', function(e) { 
+			if((e.ctrlKey || e.metaKey) && (e.key == "p" || e.charCode == 16 || e.charCode == 112 || e.keyCode == 80) ){
+        alert("Please use the Print button below for a better rendering on the document");
+        e.cancelBubble = true;
+        e.preventDefault();
+
+        e.stopImmediatePropagation();
+			}  
+		});*/
+	
+	$('#singleOrderInvoiceDate').bootstrapMaterialDatePicker({
+		weekStart: 0, time: false,format: 'DD-MM-YYYY',
+		switchOnClick: true 
+	});
+	
+	$('#trvlTo').bootstrapMaterialDatePicker({
+		weekStart: 0, time: false,format: 'DD-MM-YYYY',
+		switchOnClick: true 
+	});
+
+	$('#trvlFrm').bootstrapMaterialDatePicker({
+		weekStart: 0, time: false,switchOnClick: true,format: 'DD-MM-YYYY',
+	}).on('change', function(e, date) {
+		$('#trvlTo').val('');
+		$('#trvlTo').bootstrapMaterialDatePicker('setMinDate', date);
+	});
+	$("#updatebalance").click(function(){
+	  $(".main-balance").load("agent_header_balance.php", function(responseTxt, statusTxt, xhr){
+			
+		});
+
+	 
+	});
+    </script>
+	
+	<script src="assets/node_modules/bootstrap-switch/bootstrap-switch.min.js"></script>
+   <script type="text/javascript">
+    $(".bt-switch input[type='checkbox'], .bt-switch input[type='radio']").bootstrapSwitch();
+	
+    </script>
+	
+	
+			<script type="text/javascript">
+				$.ajax({
+					url: "api/checkspicjecttoken.php",
+					cache: false,
+					type : 'GET',
+					success: function(responseText) {
+						
+					}
+				});
+		</script>
+	
+<style type="text/css">
+#loadingMainwrapper{
+	width: 100%;
+overflow: hidden;
+display:none;
+	
+}
+.swal-wide{width:80% !important;}
+</style>
+<!--Start of Tawk.to Script-->
+
+<script type="text/javascript">
+/*var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+(function(){
+var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+s1.async=true;
+s1.src='https://embed.tawk.to/567a9b146c9554c055771b34/1dsi7khgl';
+s1.charset='UTF-8';
+s1.setAttribute('crossorigin','*');
+s0.parentNode.insertBefore(s1,s0);
+})();*/
+
+var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+(function(){
+var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+s1.async=true;
+s1.src='https://agents.farefix.com/emb.js';
+s1.charset='UTF-8';
+s1.setAttribute('crossorigin','*');
+s0.parentNode.insertBefore(s1,s0);
+})();
+
+
+Tawk_API = Tawk_API || {};
+Tawk_API.visitor = {
+  name  : 'Jora Immigration Services',
+  email : '9799813436@farefix.com',
+  hash  : '68b902e1677c98924fb90eeb010577eb0a573c28489c03f792a9b5dfb9271ffd' 
+};
+
+
+</script>
+<!-- End of Tawk.to Script -->
+
+<div class="jpr-pareshaan" style="position: fixed;bottom:5px;left:5px">
+<a href="#!" class="btn btn-info view-desktop-view visible-xs visible-sm" id="viewportView" data-type="desktop"><i class="fa fa-desktop"></i> </a>
+</div>
+<script type="text/javascript">
+$('#viewportView').on('click', function() {
+	if($(this).attr("data-type")=='desktop'){
+		$('meta[name=viewport]').attr('content','width=device-width, initial-scale=0.2');
+		$(this).attr('type','mobile');
+			
+	}
+	else {
+		$('meta[name=viewport]').attr('content','width=device-width, initial-scale=1.0');
+		$(this).attr('type','desktop');
+	}
+	})
+	
+	$('#requestCredit').on("click", function() {
+		$.ajax({
+			type: "GET",
+			url: "requestCredit.php",
+			success: function(response){
+				toastr.info('Your credit request sent successfully','Credit request', {timeOut: 10000});
+				window.setTimeout(function(){
+					window.location.href = "index.php";
+
+				}, 2000);
+			}
+		});
+	});
+
+
+</script>
+
+</body>
+</html>
